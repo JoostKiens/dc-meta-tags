@@ -17,9 +17,8 @@ class DCM_Format {
 	 * Class constructor
 	 */
 	function __construct() {
-		
-		// What?
-
+		global $post;
+		$this->post = $post;
 	}
 
 	/**
@@ -28,10 +27,9 @@ class DCM_Format {
 	 * @return string The description
 	 */
 	public function get_the_description() {
-		global $post;
-		$description = $this->_dcm_excerpt( $post->post_content, $post->post_excerpt );
-		$description = strip_tags($description);
-		$description = str_replace("\"", "'", $description);
+		$description = $this->_dcm_excerpt( $this->post->post_content, $this->post->post_excerpt );
+		$description = strip_tags( $description );
+		$description = str_replace( "\"", "'", $description );
 		return $description;
 	}
 
@@ -49,8 +47,7 @@ class DCM_Format {
 	 * @return string       The current post's title
 	 */
 	public function get_the_title() {
-		global $post;
-		return $post->post_title;
+		return $this->post->post_title;
 	}
 
 	/**
@@ -58,8 +55,7 @@ class DCM_Format {
 	 * @return string Author name (last name, first name)
 	 */
 	public function get_the_author() {
-		global $post;
-		return get_the_author_meta('last_name', $post->post_author) . ', ' . get_the_author_meta('first_name', $post->post_author);
+		return get_the_author_meta('last_name', $this->post->post_author) . ', ' . get_the_author_meta('first_name', $this->post->post_author);
 	}
 
 	/**
@@ -75,8 +71,7 @@ class DCM_Format {
 	 * @return string ISO 8601 formatted time of publication
 	 */
 	public function get_the_date() {
-		global $post;
-		return get_the_time( 'c' , $post);
+		return get_the_time( 'c' , $this->post);
 	}
 
 	/**
@@ -85,33 +80,6 @@ class DCM_Format {
 	 */
 	public function get_the_language() {
 		return get_bloginfo( 'language' );
-	}
-
-	/**
-	 * Returns the rights statement of the content
-	 * @return string Rights statement
-	 */
-	public function get_the_rights() {
-
-		// In case the  creative commons configurator plugin is used
-	    if ( function_exists( 'bccl_get_license_url' ) ) {
-	        return bccl_get_license_url();
-	    }
-	    $rights = $this->_get_options( 'elem_rights' );
-	    $rights_url = $this->_get_options( 'rights_url' );
-		if ( !empty( $rights ) && !empty( $rights_url ) ) {
-			return $rights_url;
-	    }
-	}
-
-	/**
-	 * Returns DCMI controlled Type vocabulary identifier of content type
-	 * TODO: check if image, video, etc need a specific type
-	 * 
-	 * @return string DCMI controlled Type vocabulary
-	 */
-	public function get_the_type() {
-		return 'Text';
 	}
 
 	/**
@@ -132,6 +100,32 @@ class DCM_Format {
 		return get_bloginfo( 'html_type' );
 	}
 
+	/**
+	 * Returns the rights statement of the content
+	 * @return string Rights statement
+	 */
+	public function get_the_rights() {
+
+		// In case the  creative commons configurator plugin is used
+		if ( function_exists( 'bccl_get_license_url' ) ) {
+			return bccl_get_license_url();
+		}
+		$rights = $this->_get_options( 'elem_rights' );
+		$rights_url = $this->_get_options( 'rights_url' );
+		if ( !empty( $rights ) && !empty( $rights_url ) ) {
+			return $rights_url;
+		}
+	}
+
+	/**
+	 * Returns DCMI controlled Type vocabulary identifier of content type
+	 * TODO: check if image, video, etc need a specific type
+	 * 
+	 * @return string DCMI controlled Type vocabulary
+	 */
+	public function get_the_type() {
+		return 'Text';
+	}
 	private function _get_options( $option = false )  {
 		$options = get_dcm_options();
 		return $option ? $options[$option] : $option;
@@ -172,7 +166,7 @@ class DCM_Format {
 				$keywords .= ", " . $tags;
 			}
 		}
-	    return $keywords;
+		return $keywords;
 	}
 
 	/**
@@ -180,15 +174,13 @@ class DCM_Format {
 	 * @return string Comma separated categories
 	 */
 	private function _dcm_get_categories_string() {
-    	global $post;
-    	
-    	$categories      = array();
-    	$post_categories = get_the_category( $post->ID );
+		$categories      = array();
+		$post_categories = get_the_category( $this->post->ID );
 
-    	if ( $post_categories ) {
-		    foreach( $post_categories as $category ) {
-		        $categories[] = $category->cat_name;
-		    }
+		if ( $post_categories ) {
+			foreach( $post_categories as $category ) {
+				$categories[] = $category->cat_name;
+			}
 
 			return join( ', ', $categories );
 		}
@@ -199,15 +191,14 @@ class DCM_Format {
 	 * @return string Comma separated tags
 	 */
 	private function _dcm_get_tags_string() {
-		global $post;
 
 		$tags      = array();
-		$post_tags = get_the_tags( $post->ID );
+		$post_tags = get_the_tags( $this->post->ID );
 
 		if ( $post_tags ) {
-		    foreach( $post_tags as $tag ) {
-		        $tags[] = $tag->name;
-		    }
+			foreach( $post_tags as $tag ) {
+				$tags[] = $tag->name;
+			}
 
 			return join( ', ', $tags );
 		}
