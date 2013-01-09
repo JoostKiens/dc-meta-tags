@@ -1,6 +1,6 @@
 dc-meta-tags
 ============
-WordPress plugin for adding Dublin Core meta tags to wp_head pages, posts & custom post types. Outputs XHTML, HTML4 or HTML5 syntax.
+WordPress plugin for adding Dublin Core meta tags to wp_head on pages, posts & custom post types. Outputs XHTML, HTML4 or HTML5 syntax.
 
 Description
 --------------------------------------
