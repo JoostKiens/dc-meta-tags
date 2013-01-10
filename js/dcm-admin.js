@@ -3,6 +3,12 @@
 jQuery(function ($) {
 	"use strict";
 
+	jQuery('.custom_repeatable').each(function( index ) {
+		if ( $(this).find('li').size() === 1 ) {
+			$(this).find('.repeatable-remove').hide();
+		}
+	});
+
 	jQuery('.repeatable-add').click(function() {
 		var field = jQuery(this).closest('td').find('.custom_repeatable li:last').clone(true),
 			fieldLocation = jQuery(this).closest('td').find('.custom_repeatable li:last');

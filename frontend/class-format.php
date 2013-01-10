@@ -27,10 +27,9 @@ class DCM_Format {
 	 * @return str/arr         DC meta value(s)
 	 */
 	public function get_the_elem_value( $elem, $single = true ) {
-		$post = $this->get_the_post();
-		$value = get_post_meta( get_the_ID() , '_joost_dcm_' . $elem , $single );
-
+		$value = dcm_get_value( $elem, get_the_ID() );
 		if ( !$value ) {
+			$post  = $this->get_the_post();
 			$value = $this->get_alternate_meta_value( $elem, $post );
 		}
 		return $value;

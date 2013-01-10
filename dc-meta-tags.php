@@ -62,6 +62,7 @@ function dcm_admin_init() {
 
 function dcm_load_admin_scripts() {
 	wp_enqueue_script( 'dcm-admin', DCM_URL . 'js/dcm-admin.js', 'jquery', '0.1.0' );
+	wp_enqueue_style( 'dcm-admin', DCM_URL . 'css/dcm-admin.css' );
 }
 
 /**

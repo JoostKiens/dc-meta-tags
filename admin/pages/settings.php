@@ -19,8 +19,11 @@
 		<h3><?php _e( 'Select Dublin Core Meta Tags', 'dc-meta-tags' ); ?></h3>
 		<p><?php _e( 'This plugin adds elements of Dublin Core Metadata Element Set, Version 1.1 to the <code>head</code> of this WordPress install, you can enable and disable elements below', 'dc-meta-tags' ); ?></p>
 
-		<?php settings_fields('joost_dcm_options'); ?>
-		<?php $options = get_dcm_options(); ?>
+		<?php 
+			global $dcm_admin;
+			settings_fields('joost_dcm_options');
+			$options = get_dcm_options(); 
+		?>
 
 		<table class="form-table">
 			
@@ -62,11 +65,25 @@
 			</tr>
 		</table>
 
+		<h3><?php _e( 'Post types', 'dc-meta-tags' ); ?></h3>
+		<p><?php _e( 'Select the post types which should have Dublin Core meta data.', 'dc-meta-tags' ); ?></p>
+
+		<table class="form-table">
+			<tr valign="top">
+				<th scope="row"><?php _e( 'Post types', 'dc-meta-tags' ); ?></th>
+				<td>
+				<?php foreach ( $dcm_admin->list_post_types( 'names') as $post_type => $name ) : ?>
+				<label><input name="_joost_dcm_options[post_types][]" type="checkbox" value="<?php echo $post_type; ?>" <?php if (isset($options['post_types'])) { checked(in_array($post_type, $options['post_types'])); } ?> /> <?php echo $name; ?> </label><br />
+				<?php endforeach; ?>
+				</td>
+			</tr>
+		</table>
+
 		<h3><?php _e( 'URL to copyrights page', 'dc-meta-tags' ); ?></h3>
 		<p><?php _e( 'Enter the full URL (incl. <code>http://</code>) to your copyrights page below, this will be used for the <code>rights</code> element. (optional)', 'dc-meta-tags' ); ?></p>
 		<table class="form-table">
 			<tr>
-				<th scope="row">URL to the copyrights page (optional)</th>
+				<th scope="row"><?php _e('URL to the copyrights page (optional)', 'dc-meta-tags'); ?></th>
 				<td>
 					<input type="text" size="57" name="_joost_dcm_options[rights_url]" value="<?php echo $options['rights_url']; ?>" />
 				</td>
@@ -87,6 +104,8 @@
 				</td>
 			</tr>
 		</table>
+
+
 		<?php submit_button(); ?>
 	</form>
 

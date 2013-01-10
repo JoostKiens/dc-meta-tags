@@ -11,7 +11,9 @@ if ( !defined( 'DCM_VERSION' ) ) {
 class DCM_Frontend {
 
 	public function __construct() {
-		// Call dcm_add_meta, add to wp_head
+		// Add meta data to wp_head
+	
+		$this->options = get_dcm_options();
 		add_action( 'wp_head', array( $this, 'dcm_add_meta' ) );
 	}
 
@@ -20,31 +22,26 @@ class DCM_Frontend {
 	 * @return void
 	 */
 	public function dcm_add_meta() {
-		if ( is_single() || is_page() ) {
-			$options = get_dcm_options();
-
-			if ( !empty ( $options ) ) {
-				if ( $options['output_html'] === 'html5' ) {
-					// HTML5
-					$output = $this->_get_html5_output( $options );
-				} else {
-					// XHTML1 or HTML4
-					$output = $this->_get_xhtml_output( $options );
-				}
-
-				echo $output;
+		if ( !empty ( $this->options ) && in_array( get_post_type(), $this->options['post_types'] ) && ( is_single() || is_page() ) ) {
+			if ( $this->options['output_html'] === 'html5' ) {
+				// HTML5
+				$output = $this->_get_html5_output();
+			} else {
+				// XHTML1 or HTML4
+				$output = $this->_get_xhtml_output();
 			}
+
+			echo $output;
 		}
 	}
 
 	/**
 	 * Prepare xhtml output (also used for html4)
-	 * @param  arr    $options Array of admin options
 	 * @return str             The final meta tags
 	 */
-	private function _get_xhtml_output( $options ) {
+	private function _get_xhtml_output( ) {
 		// HTML4 or XHTML1
-		if ( $options['output_html'] === 'html4' ) {
+		if ( $this->options['output_html'] === 'html4' ) {
 			$line_ending = ">\n";
 		} else {
 			$line_ending = " />\n";
@@ -71,11 +68,16 @@ class DCM_Frontend {
 		foreach ( $dc_properties as $name => $value ) {
 			$dc     = in_array( $name, $dcterms ) ? 'dcterms' : 'dc';
 			$scheme =  array_key_exists( $name, $schemes ) ? ' scheme="' . $schemes[$name] . '"' : '';
-			if ( !empty( $value ) ) {
-				if ( is_array($value) ) {
-					foreach ( $value as $val )
+			
+			if ( is_array($value) ) {
+				foreach ( $value as $val ) {
+					if ( !empty( $val ) ) {
 						$output .= '<meta name="' . $dc . '.' . ucwords( $name ) . '"'. $scheme . ' content="' . $val . '"' . $line_ending;
-				} else {
+					}
+				}
+					
+			} else {
+				if ( !empty( $value ) ) {
 					$output .= '<meta name="' . $dc . '.' . ucwords( $name ) . '"'. $scheme . ' content="' . $value . '"' . $line_ending;
 				}
 			}
@@ -86,10 +88,9 @@ class DCM_Frontend {
 
 	/**
 	 * Prepare html5 output
-	 * @param  arr    $options Array of admin options
 	 * @return str             The final meta tags
 	 */
-	private function _get_html5_output( $options ) {
+	private function _get_html5_output() {
 		$dc_properties = $this->get_dc_properties();
 		$output = '';
 
@@ -100,11 +101,14 @@ class DCM_Frontend {
 		}
 
 		foreach ( $dc_properties as $name => $value ) {
-			if ( !empty( $value ) ) {
-				if ( is_array($value) ) {
-					foreach ( $value as $val )
+			if ( is_array($value) ) {
+				foreach ( $value as $val ) {
+					if ( !empty( $val ) ) {
 						$output .= '<meta name="dcterms.' . $name . '" content="' . $val . '"' . $line_ending;
-				} else {
+					}
+				}
+			} else {
+				if ( !empty( $value ) ) {
 					$output .= '<meta name="dcterms.' . $name . '" content="' . $value . '"' . $line_ending;
 				}
 			}
@@ -119,24 +123,29 @@ class DCM_Frontend {
 	 */
 	private function get_dc_properties() {
 		$DCM_format = new DCM_Format;
-		$options    = get_dcm_options();
+		
+
+
+/// TODO: Only show when post type is selected
+
+
 
 		$dc_properties = array(
-			'contributor'   => !empty( $options['elem_contributor'] ) ? $DCM_format->get_the_elem_value( 'elem_contributor' ) : '',
-			'coverage'      => !empty( $options['elem_coverage'] ) ? $DCM_format->get_the_elem_value( 'elem_coverage' ) : '',
-			'creator'       => !empty( $options['elem_creator'] ) ? $DCM_format->get_the_elem_value( 'elem_creator' ) : '',
-			'date'          => !empty( $options['elem_date'] ) ? $DCM_format->get_the_elem_value( 'elem_date' ) : '',
-			'description'   => !empty( $options['elem_description'] ) ? $DCM_format->get_the_elem_value( 'elem_description' ) : '',
-			'format'        => !empty( $options['elem_format'] ) ? $DCM_format->get_the_elem_value( 'elem_format' ) : '',
-			'identifier'    => !empty( $options['elem_identifier'] ) ? $DCM_format->get_the_elem_value( 'elem_identifier' ) : '',
-			'language'      => !empty( $options['elem_language'] ) ? $DCM_format->get_the_elem_value( 'elem_language' ) : '',
-			'publisher'     => !empty( $options['elem_publisher'] ) ? $DCM_format->get_the_elem_value( 'elem_publisher' ) : '',
-			'relation'      => !empty( $options['elem_publisher'] ) ? $DCM_format->get_the_elem_value( 'elem_relation' ) : '',
-			'rights'        => !empty( $options['elem_rights'] ) ? $DCM_format->get_the_elem_value( 'elem_rights' ) : '',
-			'source'        => !empty( $options['elem_source'] ) ? $DCM_format->get_the_elem_value( 'elem_source' ) : '',
-			'subject'       => !empty( $options['elem_subject'] ) ? $DCM_format->get_the_elem_value( 'elem_subject' ) : '',
-			'title'         => !empty( $options['elem_title'] ) ? $DCM_format->get_the_elem_value( 'elem_title' ) : '',
-			'type'          => !empty( $options['elem_type'] ) ? $DCM_format->get_the_elem_value( 'elem_type' ) : '',
+			'contributor'   => !empty( $this->options['elem_contributor'] ) ? $DCM_format->get_the_elem_value( 'elem_contributor' ) : '',
+			'coverage'      => !empty( $this->options['elem_coverage'] ) ? $DCM_format->get_the_elem_value( 'elem_coverage' ) : '',
+			'creator'       => !empty( $this->options['elem_creator'] ) ? $DCM_format->get_the_elem_value( 'elem_creator' ) : '',
+			'date'          => !empty( $this->options['elem_date'] ) ? $DCM_format->get_the_elem_value( 'elem_date' ) : '',
+			'description'   => !empty( $this->options['elem_description'] ) ? $DCM_format->get_the_elem_value( 'elem_description' ) : '',
+			'format'        => !empty( $this->options['elem_format'] ) ? $DCM_format->get_the_elem_value( 'elem_format' ) : '',
+			'identifier'    => !empty( $this->options['elem_identifier'] ) ? $DCM_format->get_the_elem_value( 'elem_identifier' ) : '',
+			'language'      => !empty( $this->options['elem_language'] ) ? $DCM_format->get_the_elem_value( 'elem_language' ) : '',
+			'publisher'     => !empty( $this->options['elem_publisher'] ) ? $DCM_format->get_the_elem_value( 'elem_publisher' ) : '',
+			'relation'      => !empty( $this->options['elem_publisher'] ) ? $DCM_format->get_the_elem_value( 'elem_relation' ) : '',
+			'rights'        => !empty( $this->options['elem_rights'] ) ? $DCM_format->get_the_elem_value( 'elem_rights' ) : '',
+			'source'        => !empty( $this->options['elem_source'] ) ? $DCM_format->get_the_elem_value( 'elem_source' ) : '',
+			'subject'       => !empty( $this->options['elem_subject'] ) ? $DCM_format->get_the_elem_value( 'elem_subject' ) : '',
+			'title'         => !empty( $this->options['elem_title'] ) ? $DCM_format->get_the_elem_value( 'elem_title' ) : '',
+			'type'          => !empty( $this->options['elem_type'] ) ? $DCM_format->get_the_elem_value( 'elem_type' ) : '',
 		);
 		return $dc_properties;
 	}

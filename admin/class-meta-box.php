@@ -24,7 +24,7 @@ class DCM_Meta_box {
 		$this->options = get_dcm_options();
 
 		$this->meta_box_elem = array(
-			'elem_contributor'  => true,
+			'elem_contributor'  => false,
 			'elem_coverage'     => true,
 			'elem_creator'      => true,
 			'elem_description'  => true,
@@ -43,12 +43,14 @@ class DCM_Meta_box {
 	 * @return  void
 	 */
 	public function add_meta_box() {
-		add_meta_box(
-			'dcm',
-			__( 'Dublin Core Meta Data', 'dc-meta-tags' ),
-			array( $this, 'render_meta_box_content' ),
-			'post'
-		);
+		foreach ( $this->options['post_types'] as $post_type ) {
+			add_meta_box(
+				'dcm',
+				__( 'Dublin Core Meta Data', 'dc-meta-tags' ),
+				array( $this, 'render_meta_box_content' ),
+				$post_type
+			);
+		}
 	}
 
 	/**

@@ -29,7 +29,7 @@ class DCM_Admin {
 	 */
 	public function options_init() {
 		$options = array(
-			'elem_contributor' => '0',
+			'elem_contributor' => '1',
 			'elem_coverage'    => '1',
 			'elem_creator'     => '1',
 			'elem_date'        => '1',
@@ -46,9 +46,33 @@ class DCM_Admin {
 			'elem_type'        => '1',
 			'rights_url'       => '',
 			'output_html'      => 'xhtml',
+			'post_types'       => $this->list_post_types( false ),
 		);
 		add_option( "_joost_dcm_options", $options, "", "yes" );
 		register_setting( 'joost_dcm_options', '_joost_dcm_options', array( $this, 'dcm_validate') );
+	}
+
+
+	/**
+	 * Returns an array with the current post types as key and 
+	 * either the name of the post type as value OR a 1
+	 * @param   str $output_val If set to 'names' the returned array valus will the post type's name
+	 * @return  arr           Custom post types
+	 */
+	public function list_post_types( $output ) {
+		$args = array(
+			'public' => true,
+		);
+		$output = array();
+		if ($output === 'names') {
+			foreach ( get_post_types( $args, 'objects' ) as $post_type => $vars) {
+				$output[$post_type] = $vars->labels->name;
+			} 
+			return $output;
+		} else {
+			return get_post_types( $args );
+		}
+		
 	}
 
 	/**
@@ -98,6 +122,8 @@ class DCM_Admin {
 		$options['elem_type']       = ( $options['elem_type'] == 1 ? 1 : 0 );
 		$options['output_html']     = wp_filter_nohtml_kses( $options['output_html'] );
 		$options['rights_url']      = wp_filter_nohtml_kses( $options['rights_url'] );
+		foreach ($options['post_types'] as $key => $val)
+			$options['post_types'][$key] = wp_filter_nohtml_kses( $val );
 
 		return $options;
 	}
