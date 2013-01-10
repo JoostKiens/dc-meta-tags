@@ -34,19 +34,15 @@ Frequently Asked Questions
 --------------------------------------
 
 #### How is the meta data generated?
-
 The meta data is automatically generated based on the post title, author, excerpt, categories, tags, etc. 
 
 #### Can I over ride the generated meta data for specific posts?
-
 Yes, a meta box is available on the add/edit post screens.
 
 #### Where the hell is that meta box, I don't see it?
-
 Go to "Screen options" and make sure 'Dublin Core Meta Data' is checked.
 
 #### I don't like the unnessary closing slash in the HTML5 output. Can I remove it?
-
 Add `define ('DCM_HTML5_CLOSING_SLASH', false);` to you wp-config.php and you're good to go.
 .
 Changelog
