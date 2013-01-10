@@ -104,6 +104,7 @@ class DCM_Meta_box {
 				}
 			}
 			update_post_meta($_POST['post_ID'], '_dcm_' . $elem, $mydata);
+			
 		}
 	}
 
