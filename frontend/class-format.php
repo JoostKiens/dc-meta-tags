@@ -215,7 +215,8 @@ class DCM_Format {
 		return $option ? $options[$option] : $option;
 	}
 
-	/* Create the excerpt of the post
+	/**
+	 * Create the excerpt of the post
 	 * @param  string/bool $content Content of the post
 	 * @param  string/bool $excerpt Excerpt of the post
 	 * @return string/bool          Custom excerpt

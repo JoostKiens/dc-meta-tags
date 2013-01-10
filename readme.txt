@@ -51,7 +51,7 @@ Go to "Screen options" and make sure 'Dublin Core Meta Data' is checked.
 
 = I don't like the unnessary closing slash in the HTML5 output. Can I remove it? =
 
-Add `define ('DCM_HTML5_CLOSING_SLASH', false);` to you wp-config.php and you're good to go.
+Add `define ('DCM_HTML5_CLOSING_SLASH', false);` to your wp-config.php and you're good to go.
 .
 == Screenshots ==
 
