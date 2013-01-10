@@ -27,6 +27,8 @@
 			<tr valign="top">
 				<th scope="row"><?php _e( 'Dublin Core Elements v1.1', 'dc-meta-tags' ); ?></th>
 				<td>
+					<label><input name="dcm_options[elem_contributor]" type="checkbox" value="1" <?php if (isset($options['elem_contributor'])) { checked('1', $options['elem_contributor']); } ?> /> <?php _e( 'Contributor', 'dc-meta-tags' ); ?> <em>(<?php _e( 'Need to set per post', 'dc-meta-tags' ); ?>)</em></label><br />
+
 					<label><input name="dcm_options[elem_coverage]" type="checkbox" value="1" <?php if (isset($options['elem_coverage'])) { checked('1', $options['elem_coverage']); } ?> /> <?php _e( 'Coverage', 'dc-meta-tags' ); ?> </label><br />
 
 					<label><input name="dcm_options[elem_creator]" type="checkbox" value="1" <?php if (isset($options['elem_creator'])) { checked('1', $options['elem_creator']); } ?> /> <?php _e( 'Creator', 'dc-meta-tags' ); ?> </label><br />
@@ -43,7 +45,11 @@
 
 					<label><input name="dcm_options[elem_publisher]" type="checkbox" value="1" <?php if (isset($options['elem_publisher'])) { checked('1', $options['elem_publisher']); } ?> /> <?php _e( 'Publisher', 'dc-meta-tags' ); ?> </label><br />
 
+					<label><input name="dcm_options[elem_relation]" type="checkbox" value="1" <?php if (isset($options['elem_relation'])) { checked('1', $options['elem_relation']); } ?> /> <?php _e( 'relation', 'dc-meta-tags' ); ?> <em>(<?php _e( 'Need to set per post', 'dc-meta-tags' ); ?>)</em></label><br />
+
 					<label><input name="dcm_options[elem_rights]" type="checkbox" value="1" <?php if (isset($options['elem_rights'])) { checked('1', $options['elem_rights']); } ?> /> <?php _e( 'Rights', 'dc-meta-tags' ); ?> <em>(<?php _e( 'Enter an URL to the copyrights page below.', 'dc-meta-tags' ); ?>)</em></label><br />
+
+					<label><input name="dcm_options[elem_source]" type="checkbox" value="1" <?php if (isset($options['elem_source'])) { checked('1', $options['elem_source']); } ?> /> <?php _e( 'Source', 'dc-meta-tags' ); ?> <em>(<?php _e( 'Need to set per post', 'dc-meta-tags' ); ?>)</em></label><br />
 
 					<label><input name="dcm_options[elem_subject]" type="checkbox" value="1" <?php if (isset($options['elem_subject'])) { checked('1', $options['elem_subject']); } ?> /> <?php _e( 'Subject', 'dc-meta-tags' ); ?> <em>(<?php _e( 'Only on posts: list of categories and tags.', 'dc-meta-tags' ); ?>)</em></label><br />
 

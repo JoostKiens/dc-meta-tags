@@ -40,12 +40,14 @@ if ( !defined('DCM_PATH') )
 if ( !defined('DCM_BASENAME') )
 	define( 'DCM_BASENAME', plugin_basename( __FILE__ ) );
 
-define( 'DCM_VERSION', '0.0.1' );
+define( 'DCM_VERSION', '0.1.0' );
 
 load_plugin_textdomain('dc-meta-tags', false, basename( dirname( __FILE__ ) ) . '/languages' );
 
 
 require DCM_PATH.'inc/dcm-functions.php';
+// Used by admin & frontend
+require DCM_PATH . 'frontend/class-format.php';
 
 /**
  * Initialize DCM admin functionality
@@ -53,6 +55,13 @@ require DCM_PATH.'inc/dcm-functions.php';
  */
 function dcm_admin_init() {
 	require DCM_PATH.'admin/class-admin.php';
+	require DCM_PATH.'admin/class-meta-box.php';
+	
+	add_action( 'admin_enqueue_scripts', 'dcm_load_admin_scripts' );
+}
+
+function dcm_load_admin_scripts() {
+	wp_enqueue_script( 'dcm-admin', DCM_URL . 'js/dcm-admin.js', 'jquery', '0.1.0' );
 }
 
 /**
@@ -61,7 +70,7 @@ function dcm_admin_init() {
  */
 function dcm_frontend_init() {
 	require DCM_PATH . 'frontend/class-frontend.php';
-	require DCM_PATH . 'frontend/class-format.php';
+	
 }
 
 if ( is_admin() ) {

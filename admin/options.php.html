@@ -12,12 +12,15 @@ if ( !defined('DCM_VERSION') ) {
 
 class DCM_Options {
 	function __construct() {
+		var_dump('test');
 		add_action('admin_init', array(&$this, 'dcm_init' ));
 		add_action('admin_menu', array(&$this, 'dcm_add_menu'));
 	}
+
 	// Init plugin options to white list our options
 	function dcm_init(){
 		register_setting( 'dcm_options', 'dcm_elements', 'dcm_validate' );
+
 	}
 
 	// Add menu page
