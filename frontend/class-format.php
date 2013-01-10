@@ -28,7 +28,7 @@ class DCM_Format {
 	 */
 	public function get_the_elem_value( $elem, $single = true ) {
 		$post = $this->get_the_post();
-		$value = get_post_meta( get_the_ID() , '_dcm_' . $elem , $single );
+		$value = get_post_meta( get_the_ID() , '_joost_dcm_' . $elem , $single );
 
 		if ( !$value ) {
 			$value = $this->get_alternate_meta_value( $elem, $post );
@@ -55,7 +55,7 @@ class DCM_Format {
 	 * @return str          DC meta value
 	 */
 	private function get_alternate_meta_value( $elem, $post ) {
-		if ( !array_key_exists('_dcm_' . $elem, get_post_meta( get_the_ID() ) ) ) {
+		if ( !array_key_exists('_joost_dcm_' . $elem, get_post_meta( get_the_ID() ) ) ) {
 			$default_val = 'get_default_' . $elem;
 			return $this->$default_val( $post );
 		} else {

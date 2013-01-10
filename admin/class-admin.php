@@ -47,8 +47,8 @@ class DCM_Admin {
 			'rights_url'       => '',
 			'output_html'      => 'xhtml',
 		);
-		add_option( "dcm_options", $options, "", "yes" );
-		register_setting( 'joost_dcm_options', 'dcm_options', array( $this, 'dcm_validate') );
+		add_option( "_joost_dcm_options", $options, "", "yes" );
+		register_setting( 'joost_dcm_options', '_joost_dcm_options', array( $this, 'dcm_validate') );
 	}
 
 	/**

@@ -40,7 +40,7 @@ function dcm_set_value( $meta, $val, $postid ) {
  */
 function get_dcm_options_arr() {
 	$options_arr = array( 
-		'dcm_options', 
+		'_joost_dcm_options', 
 	);
 	return apply_filters( 'dcm_options', $options_arr );
 }

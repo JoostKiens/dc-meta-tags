@@ -103,8 +103,8 @@ class DCM_Meta_box {
 					$mydata[] = sanitize_text_field( $val );
 				}
 			}
-			update_post_meta($_POST['post_ID'], '_dcm_' . $elem, $mydata);
 			
+			dcm_set_value( $elem, $mydata, $_POST['post_ID'] );
 		}
 	}
 
