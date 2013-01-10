@@ -40,6 +40,10 @@ class DCM_Frontend {
 	 * @return str             The final meta tags
 	 */
 	private function _get_xhtml_output( ) {
+
+		// Elements which have a scheme attribute
+		// Elements are the keys, 
+		// scheme attribute values are the values
 		$schemes = array (
 			'date'       => 'dc.w3cdtf',
 			'format'     => 'dcterms.imt',
@@ -49,13 +53,16 @@ class DCM_Frontend {
 			'type'       => 'DCMIType',
 		);
 		
+		// Elements which use dcterms. instead of dc. as prefix
 		$dcterms = array (
 			'identifier',
 			'rights'
 		);
 
+		// HTML4 or XHTML style line endings
 		$line_ending = ( $this->options['output_html'] === 'html4' ) ? ">\n" : " />\n";
 
+		// The meta values
 		$dc_properties = $this->get_dc_properties();
 
 		$output = '<link rel="schema.DC" href="http://purl.org/DC/elements/1.1/"' . $line_ending;
@@ -85,8 +92,11 @@ class DCM_Frontend {
 	 * @return str             The final meta tags
 	 */
 	private function _get_html5_output() {
+
+		// The meta values
 		$dc_properties = $this->get_dc_properties();
 
+		// Line endings: either HTML or XHTML style
 		$line_ending = ( defined( 'DCM_HTML5_CLOSING_SLASH') && DCM_HTML5_CLOSING_SLASH === false ) ? ">\n" : " />\n";
 
 		$output = '';
