@@ -32,7 +32,6 @@ if ( !defined('DB_NAME') ) {
 	die;
 }
 
-
 if ( !defined('DCM_URL') )
 	define( 'DCM_URL', plugin_dir_url( __FILE__ ) );
 if ( !defined('DCM_PATH') )
@@ -44,9 +43,10 @@ define( 'DCM_VERSION', '0.2.0' );
 
 load_plugin_textdomain('dc-meta-tags', false, basename( dirname( __FILE__ ) ) . '/languages' );
 
-
-require DCM_PATH.'inc/dcm-functions.php';
-// Used by admin & frontend
+/**
+ * Required by admin & frontend
+ */
+require DCM_PATH . 'inc/dcm-functions.php';
 require DCM_PATH . 'frontend/class-format.php';
 
 /**
@@ -60,6 +60,10 @@ function dcm_admin_init() {
 	add_action( 'admin_enqueue_scripts', 'dcm_load_admin_scripts' );
 }
 
+/**
+ * Load scripts & stylesheets for admin
+ * @return void
+ */
 function dcm_load_admin_scripts() {
 	wp_enqueue_script( 'dcm-admin', DCM_URL . 'js/dcm-admin.js', 'jquery', '0.1.0' );
 	wp_enqueue_style( 'dcm-admin', DCM_URL . 'css/dcm-admin.css' );
