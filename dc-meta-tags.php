@@ -1,7 +1,7 @@
 <?php 
 /*
 Plugin Name: Dublin Core Meta Tags
-Version: 0.1.0
+Version: 0.2.0
 Plugin URI: http://joostkiens.com
 Description: Add Dublin Core meta tags to pages, posts & custom post types
 Author: Joost Kiens
@@ -40,7 +40,7 @@ if ( !defined('DCM_PATH') )
 if ( !defined('DCM_BASENAME') )
 	define( 'DCM_BASENAME', plugin_basename( __FILE__ ) );
 
-define( 'DCM_VERSION', '0.1.0' );
+define( 'DCM_VERSION', '0.2.0' );
 
 load_plugin_textdomain('dc-meta-tags', false, basename( dirname( __FILE__ ) ) . '/languages' );
 

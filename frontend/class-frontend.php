@@ -40,16 +40,6 @@ class DCM_Frontend {
 	 * @return str             The final meta tags
 	 */
 	private function _get_xhtml_output( ) {
-		// HTML4 or XHTML1
-		if ( $this->options['output_html'] === 'html4' ) {
-			$line_ending = ">\n";
-		} else {
-			$line_ending = " />\n";
-		}
-
-		$dc_properties = $this->get_dc_properties();
-		$output = '';
-
 		$schemes = array (
 			'date'       => 'dc.w3cdtf',
 			'format'     => 'dcterms.imt',
@@ -64,7 +54,11 @@ class DCM_Frontend {
 			'rights'
 		);
 
-		$output .= '<link rel="schema.DC" href="http://purl.org/DC/elements/1.1/"' . $line_ending;
+		$line_ending = ( $this->options['output_html'] === 'html4' ) ? ">\n" : " />\n";
+
+		$dc_properties = $this->get_dc_properties();
+
+		$output = '<link rel="schema.DC" href="http://purl.org/DC/elements/1.1/"' . $line_ending;
 		foreach ( $dc_properties as $name => $value ) {
 			$dc     = in_array( $name, $dcterms ) ? 'dcterms' : 'dc';
 			$scheme =  array_key_exists( $name, $schemes ) ? ' scheme="' . $schemes[$name] . '"' : '';
@@ -92,13 +86,10 @@ class DCM_Frontend {
 	 */
 	private function _get_html5_output() {
 		$dc_properties = $this->get_dc_properties();
-		$output = '';
 
-		if ( defined( 'DCM_HTML5_CLOSING_SLASH') && DCM_HTML5_CLOSING_SLASH === false ) {
-			$line_ending = ">\n";	
-		} else {
-			$line_ending = " />\n";
-		}
+		$line_ending = ( defined( 'DCM_HTML5_CLOSING_SLASH') && DCM_HTML5_CLOSING_SLASH === false ) ? ">\n" : " />\n";
+
+		$output = '';
 
 		foreach ( $dc_properties as $name => $value ) {
 			if ( is_array($value) ) {
@@ -124,12 +115,6 @@ class DCM_Frontend {
 	private function get_dc_properties() {
 		$DCM_format = new DCM_Format;
 		
-
-
-/// TODO: Only show when post type is selected
-
-
-
 		$dc_properties = array(
 			'contributor'   => !empty( $this->options['elem_contributor'] ) ? $DCM_format->get_the_elem_value( 'elem_contributor' ) : '',
 			'coverage'      => !empty( $this->options['elem_coverage'] ) ? $DCM_format->get_the_elem_value( 'elem_coverage' ) : '',

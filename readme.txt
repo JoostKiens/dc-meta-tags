@@ -3,56 +3,55 @@ Contributors: Joost Kiens
 Tags: Dublin Core, meta tags
 Requires at least: 3.0.1
 Tested up to: 3.5
-Stable tag: 0.1
+Stable tag: 0.2.0
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
-Add Dublin Core meta tags to wp_head pages, posts & custom post types. Supports XHTML, HTML4 and HTML5 syntax.
+WordPress plugin for adding Dublin Core meta tags to wp_head on pages, posts & custom post types. Supports XHTML, HTML4 and HTML5 syntax.
 
 == Description ==
 
 This plugin adds Dublin Core Metadata Element Set v1.1 meta tags to the head of your site. Dublin Core elements are a subset of RDF and help with the discoverability of your site.
 
 = Supported elements =
-The following elements are supported:
-* Coverage
-* Creator
-* Date
-* Description
-* Format
-* Indentifier
-* Language
-* Publisher
-* Rights
-* Subject
-* Title
-* Type
+The complete Dublin Core Metadata Element Set v1.1 is supported.
+
+= Settings =
+On the settings page (Settings > DC Meta Tags) you can configure the meta tags.
+* Select which elements should be included.
+* On which (custom) post types the meta tags should appear.
+* To which doctype the meta tags should adhere (HTML4, XHTML, HTML5)
+* Enter a default text or URL for the rights elements
+
+= Meta box on posts =
+On the add/edit post screens a meta box is available to override the default meta values. Contributor, Relation & Source, which are not auto-generated can be entered here.
 
 = Only for documents =
 Since the Dublin Core Metadata Element Set v1.1 describes documents, it is only added to pages, posts and custom post types. No meta data is added to the home page, archives, etc.
-
-= Settings =
-On the settings page (Settings > DC Meta Tags), you can select which elements should be included, to which doctype the meta tags need to adhere to and optionally add a URL to the copyright page
 
 == Installation ==
 
 1. Upload `dc-meta-tags` folder to the `/wp-content/plugins/` directory
 1. Activate the plugin through the 'Plugins' menu in WordPress
-1. Grab a cup of coffee, you're done!
+1. Go to Settings > DC Meta Tags to configure if necessary
 
 == Frequently Asked Questions ==
 
 = How is the meta data generated? =
 
-The meta data is automatically generated based on the post title, author, excerpt, categories, tags, etc.
+The meta data is automatically generated based on the post title, author, excerpt, categories, tags, etc. 
 
 = Can I over ride the generated meta data for specific posts? =
 
-Nope. Perhaps in a future version.
+Yes, a meta box is available on the add/edit post screens.
 
-= I don't like the unnessary closing slash in the HTML5 output. Can I fix it? =
+= Where the hell is that meta box, I don't see it? =
 
-Neither do I care for those slashes. Add `define ('DCM_HTML5_CLOSING_SLASH', false);` to you wp-config.php and you're good to go
+Go to "Screen options" and make sure 'Dublin Core Meta Data' is checked.
+
+= I don't like the unnessary closing slash in the HTML5 output. Can I remove it? =
+
+Add `define ('DCM_HTML5_CLOSING_SLASH', false);` to you wp-config.php and you're good to go.
 .
 == Screenshots ==
 
@@ -60,5 +59,11 @@ Neither do I care for those slashes. Add `define ('DCM_HTML5_CLOSING_SLASH', fal
 
 == Changelog ==
 
+= 0.2.0 =
+* Added meta box on posts to override auto-generated values
+* Added support for the following elements: Contributor, Relation, Source
+* Added uninstall functions to clean db
+* Abaility to select on which post types meta data should appear
+
 = 0.1.0 =
-* A Initial commit.
+* Initial commit.
