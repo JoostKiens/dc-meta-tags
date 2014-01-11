@@ -5,7 +5,7 @@
 		<tr>
 			<th scope="row">
 				<label for="elem_contributor[0]">
-					<?php _e("Contributor", 'dc-meta-tags' ); ?>
+					<?php _e("Contributor", PLUGIN_NAME ); ?>
 				</label>
 			</th>
 			<td valign="top">
@@ -19,7 +19,7 @@
 
 						<li>
 							<input type="text" name="dcm_elem_contributor[<?php echo $i; ?>]" id="elem_contributor[<?php echo $i; ?>]" value="<?php echo $contributor; ?>" size="25" /> 
-							<a class="repeatable-remove button" href="#"><?php _e('Remove', 'dc-meta-tags'); ?></a>
+							<a class="repeatable-remove button" href="#"><?php _e('Remove', PLUGIN_NAME); ?></a>
 							<em><?php _e('An entity responsible for making contributions to the resource.'); ?></em>
 						</li>
 
@@ -31,7 +31,7 @@
 
 						<li>
 							<input type="text" name="dcm_elem_contributor[<?php echo $i; ?>]" id="elem_contributor[<?php echo $i; ?>]" value="" size="25" /> 
-							<a class="repeatable-remove button" style="display: none" href="#"><?php _e('Remove', 'dc-meta-tags'); ?></a>
+							<a class="repeatable-remove button" style="display: none" href="#"><?php _e('Remove', PLUGIN_NAME); ?></a>
 							<em><?php _e('An entity responsible for making contributions to the resource.'); ?></em>
 						</li>
 				<?php
@@ -39,7 +39,7 @@
 				?>
 
 			</ul>
-			<a class="repeatable-add button" href="#"><?php _e('Add another contributor', 'dc-meta-tags'); ?></a>
+			<a class="repeatable-add button" href="#"><?php _e('Add another contributor', PLUGIN_NAME); ?></a>
 			
 			</td>
 		</tr>
@@ -48,7 +48,7 @@
 		<tr>
 			<th scope="row">
 				<label for="elem_coverage">
-					<?php _e("Coverage", 'dc-meta-tags' ); ?>
+					<?php _e("Coverage", PLUGIN_NAME ); ?>
 				</label>
 			</th>
 			<td valign="top">
@@ -61,7 +61,7 @@
 		<tr>
 			<th scope="row">
 				<label for="elem_creator">
-					<?php _e("Creator", 'dc-meta-tags' ); ?>
+					<?php _e("Creator", PLUGIN_NAME ); ?>
 				</label>
 			</th>
 			<td valign="top">
@@ -78,7 +78,7 @@
 		<tr>
 			<th scope="row">
 				<label for="elem_description">
-					<?php _e("Description", 'dc-meta-tags' ); ?>
+					<?php _e("Description", PLUGIN_NAME ); ?>
 				</label>
 			</th>
 			<td valign="top">
@@ -95,7 +95,7 @@
 		<tr>
 			<th scope="row">
 				<label for="elem_language">
-					<?php _e("Language", 'dc-meta-tags' ); ?>
+					<?php _e("Language", PLUGIN_NAME ); ?>
 				</label>
 			</th>
 			<td valign="top">
@@ -109,7 +109,7 @@
 		<tr>
 			<th scope="row">
 				<label for="elem_publisher">
-					<?php _e("Publisher", 'dc-meta-tags' ); ?>
+					<?php _e("Publisher", PLUGIN_NAME ); ?>
 				</label>
 			</th>
 			<td valign="top">
@@ -123,7 +123,7 @@
 		<tr>
 			<th scope="row">
 				<label for="elem_relation[0]">
-					<?php _e("Relations", 'dc-meta-tags' ); ?>
+					<?php _e("Relations", PLUGIN_NAME ); ?>
 				</label>
 			</th>
 			<td valign="top">
@@ -137,7 +137,7 @@
 
 						<li>
 							<input type="text" name="dcm_elem_relation[<?php echo $i; ?>]" id="elem_relation[<?php echo $i; ?>]" value="<?php echo $relation; ?>" size="25" /> 
-							<a class="repeatable-remove button" href="#"><?php _e('Remove', 'dc-meta-tags'); ?></a>
+							<a class="repeatable-remove button" href="#"><?php _e('Remove', PLUGIN_NAME); ?></a>
 							<em><?php _e('A related resource.'); ?></em><br />
 						</li>
 
@@ -149,7 +149,7 @@
 
 						<li>
 							<input type="text" name="dcm_elem_relation[<?php echo $i; ?>]" id="elem_relation[<?php echo $i; ?>]" value="" size="25" /> 
-							<a class="repeatable-remove button"  style="display: none" href="#"><?php _e('Remove', 'dc-meta-tags'); ?></a>
+							<a class="repeatable-remove button"  style="display: none" href="#"><?php _e('Remove', PLUGIN_NAME); ?></a>
 							<em><?php _e('A related resource.'); ?></em><br />
 						</li>
 				<?php
@@ -157,7 +157,7 @@
 				?>
 
 			</ul>
-			<a class="repeatable-add button" href="#"><?php _e('Add another relation', 'dc-meta-tags'); ?></a>
+			<a class="repeatable-add button" href="#"><?php _e('Add another relation', PLUGIN_NAME); ?></a>
 
 			</td>
 		</tr>
@@ -167,7 +167,7 @@
 		<tr>
 			<th scope="row">
 				<label for="elem_rights">
-					<?php _e("Rights", 'dc-meta-tags' ); ?>
+					<?php _e("Rights", PLUGIN_NAME ); ?>
 				</label>
 			</th>
 			<td valign="top">
@@ -181,7 +181,7 @@
 		<tr>
 			<th scope="row">
 				<label for="elem_source[0]">
-					<?php _e("Sources", 'dc-meta-tags' ); ?>
+					<?php _e("Sources", PLUGIN_NAME ); ?>
 				</label>
 			</th>
 			<td valign="top">
@@ -195,7 +195,7 @@
 
 						<li>
 							<input type="text" name="dcm_elem_source[<?php echo $i; ?>]" id="elem_source[<?php echo $i; ?>]" value="<?php echo $source; ?>" size="25" /> 
-							<a class="repeatable-remove button" href="#"><?php _e('Remove', 'dc-meta-tags'); ?></a>
+							<a class="repeatable-remove button" href="#"><?php _e('Remove', PLUGIN_NAME); ?></a>
 							<em><?php _e('A related resource from which the described resource is derived.'); ?></em>
 						</li>
 
@@ -207,7 +207,7 @@
 
 						<li>
 							<input type="text" name="dcm_elem_source[<?php echo $i; ?>]" id="elem_source[<?php echo $i; ?>]" value="" size="25" /> 
-							<a class="repeatable-remove button" style="display: none" href="#"><?php _e('Remove', 'dc-meta-tags'); ?></a>
+							<a class="repeatable-remove button" style="display: none" href="#"><?php _e('Remove', PLUGIN_NAME); ?></a>
 							<em><?php _e('A related resource from which the described resource is derived.'); ?></em>
 						</li>
 				<?php
@@ -215,7 +215,7 @@
 				?>
 
 			</ul>
-			<a class="repeatable-add button" href="#"><?php _e('Add another source', 'dc-meta-tags'); ?></a>
+			<a class="repeatable-add button" href="#"><?php _e('Add another source', PLUGIN_NAME); ?></a>
 			</td>
 		</tr>
 		<?php endif; ?>
@@ -224,7 +224,7 @@
 		<tr>
 			<th scope="row">
 				<label for="elem_subject">
-					<?php _e("Subject", 'dc-meta-tags' ); ?>
+					<?php _e("Subject", PLUGIN_NAME ); ?>
 				</label>
 			</th>
 			<td valign="top">
@@ -238,7 +238,7 @@
 		<tr>
 			<th scope="row">
 				<label for="elem_title">
-					<?php _e("Title", 'dc-meta-tags' ); ?>
+					<?php _e("Title", PLUGIN_NAME ); ?>
 				</label>
 			</th>
 			<td valign="top">

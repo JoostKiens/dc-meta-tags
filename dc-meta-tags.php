@@ -32,6 +32,8 @@ if ( !defined('DB_NAME') ) {
 	die;
 }
 
+if ( !defined('PLUGIN_NAME') )
+	define( 'PLUGIN_NAME', 'dc-meta-tags' );
 if ( !defined('DCM_URL') )
 	define( 'DCM_URL', plugin_dir_url( __FILE__ ) );
 if ( !defined('DCM_PATH') )
@@ -41,7 +43,7 @@ if ( !defined('DCM_BASENAME') )
 
 define( 'DCM_VERSION', '0.2.0' );
 
-load_plugin_textdomain('dc-meta-tags', false, basename( dirname( __FILE__ ) ) . '/languages' );
+load_plugin_textdomain( PLUGIN_NAME, false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
 
 /**
  * Required by admin & frontend
