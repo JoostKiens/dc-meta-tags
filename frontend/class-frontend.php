@@ -11,14 +11,14 @@ if ( !defined( 'DCM_VERSION' ) ) {
 class DCM_Frontend {
 
 	public function __construct() {
-		// Add meta data to wp_head
+		// Add metadata to wp_head
 	
 		$this->options = get_dcm_options();
 		add_action( 'wp_head', array( $this, 'dcm_add_meta' ) );
 	}
 
 	/**
-	 * Add Dublin Core Meta Data to head
+	 * Add Dublin Core Metadata to head
 	 * @return void
 	 */
 	public function dcm_add_meta() {
