@@ -96,11 +96,11 @@
 			<tr valign="top">
 				<th scope="row"><?php _e( '(X)HTML version', 'dc-meta-tags' ); ?></th>
 				<td>
-					<label><input name="_joost_dcm_options[output_html]" type="radio" value="xhtml" <?php checked('xhtml', $options['output_html']); ?> /> XHTML <span style="color:#666666;margin-left:32px;"><?php echo _( 'Meta tag will look like', 'dc-meta-tags' ), ' <code>&lt;meta name="dc.Format" scheme="dcterms.imt" content="text/html" /&gt;</code>'; ?></span></label><br />
+					<label><input name="_joost_dcm_options[output_html]" type="radio" value="xhtml" <?php checked('xhtml', $options['output_html']); ?> /> XHTML <span style="color:#666666;margin-left:32px;"><?php echo __( 'Meta tag will look like', 'dc-meta-tags' ), ' <code>&lt;meta name="dc.Format" scheme="dcterms.imt" content="text/html" /&gt;</code>'; ?></span></label><br />
 
-					<label><input name="_joost_dcm_options[output_html]" type="radio" value="html5" <?php checked('html5', $options['output_html']); ?> /> HTML5 <span style="color:#666666;margin-left:32px;"><?php echo _( 'Meta tag will look like', 'dc-meta-tags' ), ' <code>&lt;meta name="dc.format" content="text/html" /&gt;</code>'; ?></span></label><br />
+					<label><input name="_joost_dcm_options[output_html]" type="radio" value="html5" <?php checked('html5', $options['output_html']); ?> /> HTML5 <span style="color:#666666;margin-left:32px;"><?php echo __( 'Meta tag will look like', 'dc-meta-tags' ), ' <code>&lt;meta name="dc.format" content="text/html" /&gt;</code>'; ?></span></label><br />
 
-					<label><input name="_joost_dcm_options[output_html]" type="radio" value="html4" <?php checked('html4', $options['output_html']); ?> /> HTML4 <span style="color:#666666;margin-left:32px;"><?php echo _( 'Meta tag will look like', 'dc-meta-tags' ), ' <code>&lt;meta name="dc.Format" scheme="dcterms.imt" content="text/html"&gt;</code>'; ?></span></label><br />
+					<label><input name="_joost_dcm_options[output_html]" type="radio" value="html4" <?php checked('html4', $options['output_html']); ?> /> HTML4 <span style="color:#666666;margin-left:32px;"><?php echo __( 'Meta tag will look like', 'dc-meta-tags' ), ' <code>&lt;meta name="dc.Format" scheme="dcterms.imt" content="text/html"&gt;</code>'; ?></span></label><br />
 				</td>
 			</tr>
 		</table>
