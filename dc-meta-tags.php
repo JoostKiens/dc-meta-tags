@@ -7,6 +7,7 @@ Description: Add Dublin Core meta tags to pages, posts & custom post types
 Author: Joost Kiens
 Author URI: http://joostkiens.com/
 License: GPL v3
+Text domain: dc-meta-tags
 
 Dublin Core Meta Tags Plugin
 Copyright (C) 2012-2013, Joost Kiens - me@joostkiens.com
@@ -41,7 +42,7 @@ if ( !defined('DCM_BASENAME') )
 
 define( 'DCM_VERSION', '0.2.0' );
 
-load_plugin_textdomain('dc-meta-tags', false, basename( dirname( __FILE__ ) ) . '/languages' );
+load_plugin_textdomain( 'dc-meta-tags', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
 
 /**
  * Required by admin & frontend

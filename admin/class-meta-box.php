@@ -46,7 +46,7 @@ class DCM_Meta_box {
 		foreach ( $this->options['post_types'] as $post_type ) {
 			add_meta_box(
 				'dcm',
-				__( 'Dublin Core Meta Data', 'dc-meta-tags' ),
+				__( 'Dublin Core Metadata', 'dc-meta-tags' ),
 				array( $this, 'render_meta_box_content' ),
 				$post_type
 			);

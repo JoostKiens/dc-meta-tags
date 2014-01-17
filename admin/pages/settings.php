@@ -10,7 +10,7 @@
 		</p>
 	</blockquote>
 
-	<p><?php _e( 'The Dublin Core Metadata Element Set describes documents, etc. this plugin automatically adds meta tags on pages and posts (including custom post types). No meta data is added to the home page, category pages, archives, etc.', 'dc-meta-tags' ); ?></p>
+	<p><?php _e( 'The Dublin Core Metadata Element Set describes documents, etc. this plugin automatically adds meta tags on pages and posts (including custom post types). No metadata is added to the home page, category pages, archives, etc.', 'dc-meta-tags' ); ?></p>
 
 	<!-- Beginning of the Plugin Options Form -->
 	<form method="post" action="options.php">
@@ -50,7 +50,7 @@
 
 					<label><input name="_joost_dcm_options[elem_relation]" type="checkbox" value="1" <?php if (isset($options['elem_relation'])) { checked('1', $options['elem_relation']); } ?> /> <?php _e( 'relation', 'dc-meta-tags' ); ?> <em>(<?php _e( 'Need to set per post', 'dc-meta-tags' ); ?>)</em></label><br />
 
-					<label><input name="_joost_dcm_options[elem_rights]" type="checkbox" value="1" <?php if (isset($options['elem_rights'])) { checked('1', $options['elem_rights']); } ?> /> <?php _e( 'Rights', 'dc-meta-tags' ); ?> <em>(<?php _e( 'Enter an URL to the copyrights page below.', 'dc-meta-tags' ); ?>)</em></label><br />
+					<label><input name="_joost_dcm_options[elem_rights]" type="checkbox" value="1" <?php if (isset($options['elem_rights'])) { checked('1', $options['elem_rights']); } ?> /> <?php _e( 'Rights', 'dc-meta-tags' ); ?> <em>(<?php _e( 'Enter a URL to the copyrights page below.', 'dc-meta-tags' ); ?>)</em></label><br />
 
 					<label><input name="_joost_dcm_options[elem_source]" type="checkbox" value="1" <?php if (isset($options['elem_source'])) { checked('1', $options['elem_source']); } ?> /> <?php _e( 'Source', 'dc-meta-tags' ); ?> <em>(<?php _e( 'Need to set per post', 'dc-meta-tags' ); ?>)</em></label><br />
 
@@ -60,13 +60,13 @@
 
 					<label><input name="_joost_dcm_options[elem_type]" type="checkbox" value="1" <?php if (isset($options['elem_type'])) { checked('1', $options['elem_type']); } ?> /> <?php _e( 'Type', 'dc-meta-tags' ); ?> </label><br />
 
-					<span style="color:#666666;"><?php _e( 'This version of the plugin support only these elements.', 'dc-meta-tags' ); ?></span>
+					<span style="color:#666666;"><?php _e( 'This version of the plugin supports only these elements.', 'dc-meta-tags' ); ?></span>
 				</td>
 			</tr>
 		</table>
 
 		<h3><?php _e( 'Post types', 'dc-meta-tags' ); ?></h3>
-		<p><?php _e( 'Select the post types which should have Dublin Core meta data.', 'dc-meta-tags' ); ?></p>
+		<p><?php _e( 'Select the post types which should have Dublin Core Metadata.', 'dc-meta-tags' ); ?></p>
 
 		<table class="form-table">
 			<tr valign="top">
@@ -94,13 +94,13 @@
 		<p><?php _e( 'Select the (X)HTML version that resembles your doctype.', 'dc-meta-tags' ); ?></p>
 		<table class="form-table">
 			<tr valign="top">
-				<th scope="row"><?php _e( '(X)HTML Version', 'dc-meta-tags' ); ?></th>
+				<th scope="row"><?php _e( '(X)HTML version', 'dc-meta-tags' ); ?></th>
 				<td>
-					<label><input name="_joost_dcm_options[output_html]" type="radio" value="xhtml" <?php checked('xhtml', $options['output_html']); ?> /> XHTML <span style="color:#666666;margin-left:32px;"><?php _e( 'Meta tag will look like <code>&lt;meta name="dc.Format" scheme="dcterms.imt" content="text/html" /&gt;</code>', 'dc-meta-tags' ); ?></span></label><br />
+					<label><input name="_joost_dcm_options[output_html]" type="radio" value="xhtml" <?php checked('xhtml', $options['output_html']); ?> /> XHTML <span style="color:#666666;margin-left:32px;"><?php echo __( 'Meta tag will look like', 'dc-meta-tags' ), ' <code>&lt;meta name="dc.Format" scheme="dcterms.imt" content="text/html" /&gt;</code>'; ?></span></label><br />
 
-					<label><input name="_joost_dcm_options[output_html]" type="radio" value="html5" <?php checked('html5', $options['output_html']); ?> /> HTML5 <span style="color:#666666;margin-left:32px;"><?php _e( 'Meta tag will look like <code>&lt;meta name="dc.format" content="text/html" /&gt;</code>', 'dc-meta-tags' ); ?></span></label><br />
+					<label><input name="_joost_dcm_options[output_html]" type="radio" value="html5" <?php checked('html5', $options['output_html']); ?> /> HTML5 <span style="color:#666666;margin-left:32px;"><?php echo __( 'Meta tag will look like', 'dc-meta-tags' ), ' <code>&lt;meta name="dc.format" content="text/html" /&gt;</code>'; ?></span></label><br />
 
-					<label><input name="_joost_dcm_options[output_html]" type="radio" value="html4" <?php checked('html4', $options['output_html']); ?> /> HTML4 <span style="color:#666666;margin-left:32px;"><?php _e( 'Meta tag will look like <code>&lt;meta name="dc.Format" scheme="dcterms.imt" content="text/html"&gt;</code>', 'dc-meta-tags' ); ?></span></label><br />
+					<label><input name="_joost_dcm_options[output_html]" type="radio" value="html4" <?php checked('html4', $options['output_html']); ?> /> HTML4 <span style="color:#666666;margin-left:32px;"><?php echo __( 'Meta tag will look like', 'dc-meta-tags' ), ' <code>&lt;meta name="dc.Format" scheme="dcterms.imt" content="text/html"&gt;</code>'; ?></span></label><br />
 				</td>
 			</tr>
 		</table>

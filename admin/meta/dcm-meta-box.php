@@ -1,4 +1,4 @@
-<p><strong><a href="http://dublincore.org/documents/dces/" target="_blank"><?php _e('Dublin Core specification & information about recommende values.'); ?></a></strong><p>
+<p><strong><a href="http://dublincore.org/documents/dces/" target="_blank"><?php _e('Dublin Core specification & information about recommended values.'); ?></a></strong><p>
 <table class="form-table">
 	<tbody>
 		<?php if ( $this->options['elem_contributor'] === 1 ) : ?>
