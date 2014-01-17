@@ -57,3 +57,13 @@ function get_dcm_options() {
 	}
 	return $options;
 }
+
+/**
+ * Print a question mark tooltip
+ * @param  str  $str The title text for the tooltip
+ * @return void
+ */
+function echo_tooltip( $str ) {
+
+	printf( '<span class="icon-question" alt="%1$s" title="%1$s">?</span>', $str );
+}

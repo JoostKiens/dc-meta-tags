@@ -10,7 +10,7 @@ License: GPL v3
 Text domain: dc-meta-tags
 
 Dublin Core Meta Tags Plugin
-Copyright (C) 2012-2013, Joost Kiens - me@joostkiens.com
+Copyright (C) 2012-2014, Joost Kiens - me@joostkiens.com
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -76,7 +76,6 @@ function dcm_load_admin_scripts() {
  */
 function dcm_frontend_init() {
 	require DCM_PATH . 'frontend/class-frontend.php';
-	
 }
 
 if ( is_admin() ) {

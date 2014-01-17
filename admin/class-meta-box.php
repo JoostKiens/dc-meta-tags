@@ -77,7 +77,7 @@ class DCM_Meta_box {
 	public function save_postdata( $post_id ) {
 		// verify if this is an auto save routine. 
 		// If it is, our form has not been submitted, 
-		// so we dont want to do anything
+		// so we don't want to do anything
 		if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) 
 			return;
 
@@ -95,7 +95,7 @@ class DCM_Meta_box {
 				return;
 		}
 
-		// Still here? Find to find and save the data
+		// Still here? Find and save the data
 		foreach ( $this->meta_box_elem as $elem => $single ) {
 			if ( $single ) {
 				$mydata = sanitize_text_field( $_POST['dcm_' . $elem] );
