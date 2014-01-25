@@ -28,6 +28,7 @@ class DCM_Admin {
 	 * @return void
 	 */
 	public function options_init() {
+		// '1' in elem_* means it’s enabled
 		$options = array(
 			'elem_contributor' => '1',
 			'elem_coverage'    => '1',
@@ -140,7 +141,9 @@ class DCM_Admin {
 		if ( version_compare($wp_version, "3.3", "<" ) ) {
 			if( is_plugin_active($plugin) ) {
 				deactivate_plugins( $plugin );
-				wp_die( "'".$plugin_data['Name']."' requires WordPress 3.3 or higher, and has been deactivated! Please upgrade WordPress and try again.<br /><br />Back to <a href='".admin_url()."'>WordPress admin</a>." );
+				$msg_err = sprintf( __( '"%s" requires WordPress 3.3 or higher, and has been deactivated! Please upgrade WordPress and try again.', 'dc-meta-tags' ), $plugin_data['Name'] );
+				$msg_back = __( 'Back to WordPress admin', 'dc-meta-tags' );
+				wp_die(  $msg_err . '<br /><br /><a href="'.admin_url().'">' . $msg_back, '</a>' );
 			}
 		}
 	}

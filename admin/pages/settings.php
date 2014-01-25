@@ -2,22 +2,22 @@
 	<?php screen_icon(); ?>
 	<h2><?php _e( 'Dublin Core Meta Tags', 'dc-meta-tags' ); ?></h2>
 
-	<p><?php _e( 'This plugin adds <a href="http://dublincore.org/documents/2012/06/14/dces/" target="_blank">Dublin Core Metadata Element Set v1.1</a> meta tags to the <code>head</code> of your site. Dublin Core elements are a subset of RDF and help with the discoverability of your site.', 'dc-meta-tags' ); ?></p>
+	<p><?php printf ( __( 'This plugin adds %sDublin Core Metadata Element Set v1.1%s meta tags to the <code>head</code> of your site. Dublin Core elements are a subset of RDF and help with the discoverability of your site.', 'dc-meta-tags' ), '<a href="http://dublincore.org/documents/dces/" target="_blank">', '</a>' ); ?></p>
 
 	<blockquote cite="http://en.wikipedia.org/wiki/Dublin_Core">
-		<p><em>"
-			<?php _e( 'Dublin Core Metadata can be used for multiple purposes, from simple resource description, to combining metadata vocabularies of different metadata standards, to providing interoperability for metadata vocabularies in the Linked data cloud and Semantic web implementations.', 'dc-meta-tags' ); ?>"</em>
+		<p>
+			<?php _e( '“Dublin Core Metadata can be used for multiple purposes, from simple resource description, to combining metadata vocabularies of different metadata standards, to providing interoperability for metadata vocabularies in the Linked data cloud and Semantic web implementations.”', 'dc-meta-tags' ); ?>
 		</p>
 	</blockquote>
 
-	<p><?php _e( 'The Dublin Core Metadata Element Set describes documents, etc. this plugin automatically adds meta tags on pages and posts (including custom post types). No metadata is added to the home page, category pages, archives, etc.', 'dc-meta-tags' ); ?></p>
+	<p><?php _e( 'This plugin automatically adds meta tags on pages and posts, including custom post types. No metadata is added to pages created by WordPress like the home page, category pages, archives, etc.', 'dc-meta-tags' ); ?></p>
 
 	<!-- Beginning of the Plugin Options Form -->
 	<form method="post" action="options.php">
 		
 
 		<h3><?php _e( 'Select Dublin Core Meta Tags', 'dc-meta-tags' ); ?></h3>
-		<p><?php _e( 'This plugin adds elements of Dublin Core Metadata Element Set, Version 1.1 to the <code>head</code> of this WordPress install, you can enable and disable elements below', 'dc-meta-tags' ); ?></p>
+		<p><?php _e( 'Enable and disable elements below.', 'dc-meta-tags' ); ?></p>
 
 		<?php 
 			global $dcm_admin;
@@ -48,7 +48,7 @@
 
 					<label><input name="_joost_dcm_options[elem_publisher]" type="checkbox" value="1" <?php if (isset($options['elem_publisher'])) { checked('1', $options['elem_publisher']); } ?> /> <?php _e( 'Publisher', 'dc-meta-tags' ); ?> </label><br />
 
-					<label><input name="_joost_dcm_options[elem_relation]" type="checkbox" value="1" <?php if (isset($options['elem_relation'])) { checked('1', $options['elem_relation']); } ?> /> <?php _e( 'relation', 'dc-meta-tags' ); ?> <em>(<?php _e( 'Need to set per post', 'dc-meta-tags' ); ?>)</em></label><br />
+					<label><input name="_joost_dcm_options[elem_relation]" type="checkbox" value="1" <?php if (isset($options['elem_relation'])) { checked('1', $options['elem_relation']); } ?> /> <?php _e( 'Relation', 'dc-meta-tags' ); ?> <em>(<?php _e( 'Need to set per post', 'dc-meta-tags' ); ?>)</em></label><br />
 
 					<label><input name="_joost_dcm_options[elem_rights]" type="checkbox" value="1" <?php if (isset($options['elem_rights'])) { checked('1', $options['elem_rights']); } ?> /> <?php _e( 'Rights', 'dc-meta-tags' ); ?> <em>(<?php _e( 'Enter a URL to the copyrights page below.', 'dc-meta-tags' ); ?>)</em></label><br />
 
@@ -79,11 +79,11 @@
 			</tr>
 		</table>
 
-		<h3><?php _e( 'URL to copyrights page', 'dc-meta-tags' ); ?></h3>
-		<p><?php _e( 'Enter the full URL (incl. <code>http://</code>) to your copyrights page below, this will be used for the <code>rights</code> element. (optional)', 'dc-meta-tags' ); ?></p>
+		<h3><?php _e( 'URL to the copyrights page', 'dc-meta-tags' ); ?></h3>
+		<p><?php _e( 'Enter the full URL (incl. <code>http://</code>) to your copyrights page below. This will be used for the <code>rights</code> element. (optional)', 'dc-meta-tags' ); ?></p>
 		<table class="form-table">
 			<tr>
-				<th scope="row"><?php _e('URL to the copyrights page (optional)', 'dc-meta-tags'); ?></th>
+				<th scope="row"><?php _e('URL to the copyrights page', 'dc-meta-tags'); ?></th>
 				<td>
 					<input type="text" size="57" name="_joost_dcm_options[rights_url]" value="<?php echo $options['rights_url']; ?>" />
 				</td>

@@ -1,6 +1,27 @@
+/* for the quote in the admin page */
+.wrap blockquote {
+	font-style: italic;
+}
+
+/* for the multivalue fields in the meta box */
 .custom_repeatable {
 	margin: 0;
 }
 .custom_repeatable li {
 	margin-bottom: 3px;
+}
+
+/* for the metadata "tooltips" */
+.icon-question {
+	display: inline-block;
+	margin-left: 4px;
+	margin-right: 4px;
+	background: #fcfcfc;
+	border: 1px solid #ddd;
+	border-radius: 10px;
+	cursor: pointer;
+	line-height: 1;
+	width: 14px;
+	height: 14px;
+	text-align: center;
 }
