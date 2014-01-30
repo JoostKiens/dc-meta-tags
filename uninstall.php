@@ -8,6 +8,8 @@
 if( !defined( 'ABSPATH' ) && !defined( 'WP_UNINSTALL_PLUGIN' ) )
 	exit();
 
+/* remove plugin options */
+
 $plugin_options = array(
 		'_joost_dcm_options',
 );
@@ -16,13 +18,13 @@ foreach ( $plugin_options as $option) {
 	delete_option( $option );
 }
 
+/* remove meta from posts and pages */
 
 $args = array(
 	'public' => true,
 );
 
 $post_types = get_post_types( $args );
-
 
 $args = array (
 	'numberposts' => -1,

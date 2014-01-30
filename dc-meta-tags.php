@@ -1,12 +1,15 @@
 <?php 
 /*
 Plugin Name: Dublin Core Meta Tags
-Version: 0.2.0
+Version: 0.2.2
 Plugin URI: http://joostkiens.com
 Description: Add Dublin Core meta tags to pages, posts & custom post types
 Author: Joost Kiens
 Author URI: http://joostkiens.com/
 License: GPL v3
+License URI:       http://www.gnu.org/licenses/gpl-3.0.txt
+GitHub Plugin URI: https://github.com/JoostKiens/dc-meta-tags
+Requires at least: 3.3.0
 Text domain: dc-meta-tags
 
 Dublin Core Meta Tags Plugin
@@ -33,14 +36,12 @@ if ( !defined('DB_NAME') ) {
 	die;
 }
 
-if ( !defined('DCM_URL') )
-	define( 'DCM_URL', plugin_dir_url( __FILE__ ) );
-if ( !defined('DCM_PATH') )
-	define( 'DCM_PATH', plugin_dir_path( __FILE__ ) );
-if ( !defined('DCM_BASENAME') )
-	define( 'DCM_BASENAME', plugin_basename( __FILE__ ) );
-
-define( 'DCM_VERSION', '0.2.0' );
+define( 'DCM_MAINFILE', __FILE__ );
+define( 'DCM_BASENAME', plugin_basename( __FILE__ ) );
+define( 'DCM_PATH', plugin_dir_path( __FILE__ ) );
+define( 'DCM_URL', plugin_dir_url( __FILE__ ) );
+define( 'DCM_VERSION', '0.2.2' );
+define( 'DCM_MIN_WP_VERSION', '3.3.0');
 
 load_plugin_textdomain( 'dc-meta-tags', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
 
@@ -83,4 +84,3 @@ if ( is_admin() ) {
 } else {	
 	add_action( 'plugins_loaded', 'dcm_frontend_init', 0 );
 }
-

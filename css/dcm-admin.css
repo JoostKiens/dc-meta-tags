@@ -17,6 +17,7 @@
 	margin-left: 4px;
 	margin-right: 4px;
 	background: #fcfcfc;
+	color: #ddd;
 	border: 1px solid #ddd;
 	border-radius: 10px;
 	cursor: pointer;
@@ -24,4 +25,8 @@
 	width: 14px;
 	height: 14px;
 	text-align: center;
+}
+.icon-question:hover {
+	color: black;
+	border: 1px solid black;
 }

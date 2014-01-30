@@ -6,9 +6,9 @@ WordPress plugin for adding Dublin Core meta tags to wp_head on pages, posts & c
 * *Tags:* Dublin Core, meta tags, metadata, RDF
 * *Requires at least:* 3.0.1
 * *Tested up to:* 3.8.1
-* *Stable tag:* 0.2.1
+* *Stable tag:* 0.2.2
 * *License:* GPLv3
-* *License URI:* [http://www.gnu.org/licenses/gpl-3.0.html](http://www.gnu.org/licenses/gpl-3.0.html)
+* *License URI:* [http://www.gnu.org/licenses/gpl-3.0.html](http://www.gnu.org/licenses/gpl-3.0.html) or see the included `LICENSE.txt` and `LICENSE.md`
 
 Description
 ---------------------------------
@@ -52,22 +52,39 @@ Yes, a meta box is available on the add/edit post screens.
 Go to ‘Screen options’ and make sure ‘Dublin Core Metadata’ is checked.
 
 #### I don't like the unnessary closing slash in the HTML5 output. Can I remove it?
-Add `define ('DCM_HTML5_CLOSING_SLASH', false);` to your wp-config.php and you’re good to go.
+Add `define ('DCM_HTML5_CLOSING_SLASH', false);` to your `wp-config.php` and you’re good to go.
 
 Changelog
 ---------------------------------
 
+#### 0.2.2
+
+*Released 2014-01-31*
+
+* Fixed: Aborts if WordPress version is unsupported
+* Minimum WordPress version changed to 3.3.0, according to [Plugin-Datei Doktor](http://de.wpseek.com/pluginfilecheck/)
+* Added `LICENSE.txt` and `LICENSE.md` from [TheFox / GPLv3.md](https://github.com/TheFox/GPLv3.md)
+
 #### 0.2.1
+
+*Released 2014-01-25*
+
 * i18n ready
 * l10n: Portuguese (pt)
 * Tidied up text in the admin page
 * Moved help text to tooltips in the meta box, to tidy up the screen and avoid duplication of help text for multivalue fields
 
 #### 0.2.0
+
+*Released 2013-01-10*
+
 * Added meta box on posts to override auto-generated values
 * Added support for the following elements: Contributor, Relation, Source
 * Added uninstall functions to clean db
 * Ability to select on which post types metadata should appear
 
 #### 0.1.0
+
+*Released 2013-01-07*
+
 * Initial commit
