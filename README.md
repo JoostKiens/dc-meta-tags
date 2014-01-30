@@ -4,7 +4,7 @@ WordPress plugin for adding Dublin Core meta tags to wp_head on pages, posts & c
 
 * *Contributors:* Joost Kiens, Júlio Reis
 * *Tags:* Dublin Core, meta tags, metadata, RDF
-* *Requires at least:* 3.0.1
+* *Requires at least:* 3.3.0
 * *Tested up to:* 3.8.1
 * *Stable tag:* 0.2.2
 * *License:* GPLv3

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dc-meta-tags\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-01-30 23:41+0000\n"
+"POT-Creation-Date: 2014-01-30 23:50+0000\n"
 "PO-Revision-Date: 2014-01-30 23:26-0000\n"
 "Last-Translator: Júlio Reis <webmaster@arocha.org>\n"
 "Language-Team: \n"
@@ -14,23 +14,22 @@ msgstr ""
 "X-Poedit-Basepath: .\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: BIGFILE.php:85 BIGFILE.php:546 admin/class-admin.php:85
-#: admin/pages/settings.php:3
+#: admin/class-admin.php:85 admin/pages/settings.php:3
 msgid "Dublin Core Meta Tags"
 msgstr "Dublin Core Meta Tags"
 
-#: BIGFILE.php:86 admin/class-admin.php:86
+#: admin/class-admin.php:86
 msgid "DC Meta Tags"
 msgstr "DC Meta Tags"
 
 #. TRANSLATORS: first placeholder for plugin name, second for version number
-#: BIGFILE.php:146 admin/class-admin.php:146
+#: admin/class-admin.php:146
 #, php-format
 msgid "%1$s %2$s not activated"
 msgstr "%1$s %2$s não ativado"
 
 #. TRANSLATORS: first placeholder for current WordPress version, second for required version
-#: BIGFILE.php:148 admin/class-admin.php:148
+#: admin/class-admin.php:148
 #, php-format
 msgid ""
 "You are running WordPress version %1$s. This plugin requires version %2$s or "
@@ -39,49 +38,45 @@ msgstr ""
 "Está a correr o WordPress %1$s. Este plugin exige no mínimo a versão %2$s, e "
 "foi desativado! Por favor atualize o WordPress e tente novamente."
 
-#: BIGFILE.php:149 admin/class-admin.php:149
+#: admin/class-admin.php:149
 msgid "Back to WordPress admin"
 msgstr "Regressar à página de administração do WordPress"
 
-#: BIGFILE.php:168 admin/class-admin.php:168
+#: admin/class-admin.php:168
 msgid "Settings"
 msgstr "Configuração"
 
-#: BIGFILE.php:225 admin/class-meta-box.php:49
+#: admin/class-meta-box.php:49
 msgid "Dublin Core Metadata"
 msgstr "Metadados Dublin Core"
 
-#: BIGFILE.php:293 admin/meta/dcm-meta-box.php:1
+#: admin/meta/dcm-meta-box.php:1
 msgid "Dublin Core specification and information about recommended values"
 msgstr "Especificação Dublin Core, e informação sobre valores recomendados"
 
-#: BIGFILE.php:300 BIGFILE.php:576 admin/meta/dcm-meta-box.php:8
-#: admin/pages/settings.php:33
+#: admin/meta/dcm-meta-box.php:8 admin/pages/settings.php:33
 msgid "Contributor"
 msgstr "Contribuinte"
 
-#: BIGFILE.php:302 admin/meta/dcm-meta-box.php:10
+#: admin/meta/dcm-meta-box.php:10
 msgid "An entity responsible for making contributions to the resource"
 msgstr "Uma entidade responsável por fazer contribuições para o recurso"
 
-#: BIGFILE.php:315 BIGFILE.php:326 BIGFILE.php:433 BIGFILE.php:445
-#: BIGFILE.php:492 BIGFILE.php:503 admin/meta/dcm-meta-box.php:23
-#: admin/meta/dcm-meta-box.php:34 admin/meta/dcm-meta-box.php:141
-#: admin/meta/dcm-meta-box.php:153 admin/meta/dcm-meta-box.php:200
-#: admin/meta/dcm-meta-box.php:211
+#: admin/meta/dcm-meta-box.php:23 admin/meta/dcm-meta-box.php:34
+#: admin/meta/dcm-meta-box.php:141 admin/meta/dcm-meta-box.php:153
+#: admin/meta/dcm-meta-box.php:200 admin/meta/dcm-meta-box.php:211
 msgid "Remove"
 msgstr "Remover"
 
-#: BIGFILE.php:333 admin/meta/dcm-meta-box.php:41
+#: admin/meta/dcm-meta-box.php:41
 msgid "Add another contributor"
 msgstr "Inserir outro contribuinte"
 
-#: BIGFILE.php:342 BIGFILE.php:578 admin/meta/dcm-meta-box.php:50
-#: admin/pages/settings.php:35
+#: admin/meta/dcm-meta-box.php:50 admin/pages/settings.php:35
 msgid "Coverage"
 msgstr "Cobertura"
 
-#: BIGFILE.php:344 admin/meta/dcm-meta-box.php:52
+#: admin/meta/dcm-meta-box.php:52
 msgid ""
 "The spatial or temporal topic of the resource, the spatial applicability of "
 "the resource, or the jurisdiction under which the resource is relevant"
@@ -89,94 +84,87 @@ msgstr ""
 "O tópico espacial ou temporal do recurso, a aplicabilidade espacial do "
 "recurso, ou a jurisdição sob a qual o recurso é relevante"
 
-#: BIGFILE.php:356 BIGFILE.php:580 admin/meta/dcm-meta-box.php:64
-#: admin/pages/settings.php:37
+#: admin/meta/dcm-meta-box.php:64 admin/pages/settings.php:37
 msgid "Creator"
 msgstr "Criador"
 
-#: BIGFILE.php:358 admin/meta/dcm-meta-box.php:66
+#: admin/meta/dcm-meta-box.php:66
 msgid "An entity primarily responsible for making the resource"
 msgstr "Uma entidade que é a responsável primária pela criação do recurso"
 
-#: BIGFILE.php:373 BIGFILE.php:584 admin/meta/dcm-meta-box.php:81
-#: admin/pages/settings.php:41
+#: admin/meta/dcm-meta-box.php:81 admin/pages/settings.php:41
 msgid "Description"
 msgstr "Descrição"
 
-#: BIGFILE.php:375 admin/meta/dcm-meta-box.php:83
+#: admin/meta/dcm-meta-box.php:83
 msgid "An account of the resource"
 msgstr "Uma descrição do recurso"
 
-#: BIGFILE.php:390 BIGFILE.php:590 admin/meta/dcm-meta-box.php:98
-#: admin/pages/settings.php:47
+#: admin/meta/dcm-meta-box.php:98 admin/pages/settings.php:47
 msgid "Language"
 msgstr "Língua"
 
-#: BIGFILE.php:392 admin/meta/dcm-meta-box.php:100
+#: admin/meta/dcm-meta-box.php:100
 msgid "A language of the resource"
 msgstr "Uma língua do recurso"
 
-#: BIGFILE.php:404 BIGFILE.php:592 admin/meta/dcm-meta-box.php:112
-#: admin/pages/settings.php:49
+#: admin/meta/dcm-meta-box.php:112 admin/pages/settings.php:49
 msgid "Publisher"
 msgstr "Editor"
 
-#: BIGFILE.php:406 admin/meta/dcm-meta-box.php:114
+#: admin/meta/dcm-meta-box.php:114
 msgid "An entity responsible for making the resource available"
 msgstr "Uma entidade responsável pela disponibilização do recurso"
 
-#: BIGFILE.php:418 admin/meta/dcm-meta-box.php:126
+#: admin/meta/dcm-meta-box.php:126
 msgid "Relations"
 msgstr "Relações"
 
-#: BIGFILE.php:420 admin/meta/dcm-meta-box.php:128
+#: admin/meta/dcm-meta-box.php:128
 msgid "A related resource"
 msgstr "Um recurso relacionado"
 
-#: BIGFILE.php:453 admin/meta/dcm-meta-box.php:161
+#: admin/meta/dcm-meta-box.php:161
 msgid "Add another relation"
 msgstr "Acrescentar outra relação"
 
-#: BIGFILE.php:463 BIGFILE.php:596 admin/meta/dcm-meta-box.php:171
-#: admin/pages/settings.php:53
+#: admin/meta/dcm-meta-box.php:171 admin/pages/settings.php:53
 msgid "Rights"
 msgstr "Direitos"
 
-#: BIGFILE.php:465 admin/meta/dcm-meta-box.php:173
+#: admin/meta/dcm-meta-box.php:173
 msgid "Information about rights held in and over the resource"
 msgstr "Informação sobre os direitos detidos sobre o recurso"
 
-#: BIGFILE.php:477 admin/meta/dcm-meta-box.php:185
+#: admin/meta/dcm-meta-box.php:185
 msgid "Sources"
 msgstr "Fontes"
 
-#: BIGFILE.php:479 admin/meta/dcm-meta-box.php:187
+#: admin/meta/dcm-meta-box.php:187
 msgid "A related resource from which the described resource is derived"
 msgstr "Um recurso relacionado, do qual o recurso descrito foi derivado"
 
-#: BIGFILE.php:510 admin/meta/dcm-meta-box.php:218
+#: admin/meta/dcm-meta-box.php:218
 msgid "Add another source"
 msgstr "Acrescentar outra fonte"
 
-#: BIGFILE.php:519 BIGFILE.php:600 admin/meta/dcm-meta-box.php:227
-#: admin/pages/settings.php:57
+#: admin/meta/dcm-meta-box.php:227 admin/pages/settings.php:57
 msgid "Subject"
 msgstr "Assunto"
 
-#: BIGFILE.php:521 admin/meta/dcm-meta-box.php:229
+#: admin/meta/dcm-meta-box.php:229
 msgid "The topic of the resource"
 msgstr "O tópico do recurso"
 
-#: BIGFILE.php:533 BIGFILE.php:602 admin/meta/dcm-meta-box.php:241
-#: admin/pages/settings.php:59
+#: admin/meta/dcm-meta-box.php:241 admin/pages/settings.php:59
 msgid "Title"
 msgstr "Título"
 
-#: BIGFILE.php:535 admin/meta/dcm-meta-box.php:243
+#: admin/meta/dcm-meta-box.php:243
 msgid "A name given to the resource"
 msgstr "Um nome dado ao recurso"
 
-#: BIGFILE.php:548 admin/pages/settings.php:5
+#: admin/pages/settings.php:5
 #, php-format
 msgid ""
 "This plugin adds %sDublin Core Metadata Element Set v1.1%s meta tags to the "
@@ -187,7 +175,7 @@ msgstr ""
 "v1.1%s à secção <code>head</code> do seu site. Os elementos Dublin Core são "
 "um subconjunto do RDF, e melhoram a visibilidade do seu site."
 
-#: BIGFILE.php:552 admin/pages/settings.php:9
+#: admin/pages/settings.php:9
 msgid ""
 "“Dublin Core Metadata can be used for multiple purposes, from simple "
 "resource description, to combining metadata vocabularies of different "
@@ -199,7 +187,7 @@ msgstr ""
 "distintas, até ao fornecimento de interoperabilidade de vocabulários de "
 "metadados em implementações da Nuvem de dados ligados e da Web semântica.»"
 
-#: BIGFILE.php:556 admin/pages/settings.php:13
+#: admin/pages/settings.php:13
 msgid ""
 "This plugin automatically adds meta tags on pages and posts, including "
 "custom post types. No metadata is added to pages created by WordPress like "
@@ -210,81 +198,79 @@ msgstr ""
 "pelo WordPress, tais como a página principal, as páginas de categorias, os "
 "arquivos etc."
 
-#: BIGFILE.php:562 admin/pages/settings.php:19
+#: admin/pages/settings.php:19
 msgid "Select Dublin Core Meta Tags"
 msgstr "Selecione os meta tags Dublin Core"
 
-#: BIGFILE.php:563 admin/pages/settings.php:20
+#: admin/pages/settings.php:20
 msgid "Enable and disable elements below."
 msgstr "Ative e desative elementos aqui."
 
-#: BIGFILE.php:574 admin/pages/settings.php:31
+#: admin/pages/settings.php:31
 msgid "Dublin Core Elements v1.1"
 msgstr "Dublin Core Elements v1.1"
 
-#: BIGFILE.php:576 BIGFILE.php:594 BIGFILE.php:598 admin/pages/settings.php:33
-#: admin/pages/settings.php:51 admin/pages/settings.php:55
+#: admin/pages/settings.php:33 admin/pages/settings.php:51
+#: admin/pages/settings.php:55
 msgid "Need to set per post"
 msgstr "Inserir individualmente em cada post"
 
-#: BIGFILE.php:582 admin/pages/settings.php:39
+#: admin/pages/settings.php:39
 msgid "Date"
 msgstr "Data"
 
-#: BIGFILE.php:586 admin/pages/settings.php:43
+#: admin/pages/settings.php:43
 msgid "Format"
 msgstr "Formato"
 
-#: BIGFILE.php:588 admin/pages/settings.php:45
+#: admin/pages/settings.php:45
 msgid "Identifier"
 msgstr "Identificador"
 
-#: BIGFILE.php:590 admin/pages/settings.php:47
+#: admin/pages/settings.php:47
 msgid ""
 "Redundant with the <code>lang</code> attribute on the <code>html</code> "
 "element."
 msgstr ""
 "Redundante com o atributo <code>lang</code> do elemento <code>html</code>."
 
-#: BIGFILE.php:594 admin/pages/settings.php:51
+#: admin/pages/settings.php:51
 msgid "Relation"
 msgstr "Relação"
 
-#: BIGFILE.php:596 admin/pages/settings.php:53
+#: admin/pages/settings.php:53
 msgid "Enter a URL to the copyrights page below."
 msgstr "Insira o URL para a página sobre direitos de autor."
 
-#: BIGFILE.php:598 admin/pages/settings.php:55
+#: admin/pages/settings.php:55
 msgid "Source"
 msgstr "Fonte"
 
-#: BIGFILE.php:600 admin/pages/settings.php:57
+#: admin/pages/settings.php:57
 msgid "Only on posts: list of categories and tags."
 msgstr "Apenas em posts: lista de categorias e de tags."
 
-#: BIGFILE.php:604 admin/pages/settings.php:61
+#: admin/pages/settings.php:61
 msgid "Type"
 msgstr "Tipo"
 
-#: BIGFILE.php:606 admin/pages/settings.php:63
+#: admin/pages/settings.php:63
 msgid "This version of the plugin supports only these elements."
 msgstr "Esta versão do plugin suporta apenas estes elementos."
 
-#: BIGFILE.php:611 BIGFILE.php:616 admin/pages/settings.php:68
-#: admin/pages/settings.php:73
+#: admin/pages/settings.php:68 admin/pages/settings.php:73
 msgid "Post types"
 msgstr "Tipos de posts"
 
-#: BIGFILE.php:612 admin/pages/settings.php:69
+#: admin/pages/settings.php:69
 msgid "Select the post types which should have Dublin Core Metadata."
 msgstr "Selecione os tipos de posts que devem ter metadados Dublin Core."
 
-#: BIGFILE.php:625 BIGFILE.php:629 admin/pages/settings.php:82
-#: admin/pages/settings.php:86
+#: admin/pages/settings.php:82 admin/pages/settings.php:86
 msgid "URL to the copyrights page"
 msgstr "URL da página de direitos de autor"
 
-#: BIGFILE.php:626 admin/pages/settings.php:83
+#: admin/pages/settings.php:83
 msgid ""
 "Enter the full URL (incl. <code>http://</code>) to your copyrights page "
 "below. This will be used for the <code>rights</code> element. (optional)"
@@ -293,17 +279,16 @@ msgstr ""
 "direitos de autor. Este valor será usado para o elemento <code>Rights</code> "
 "(Opcional)."
 
-#: BIGFILE.php:636 BIGFILE.php:640 admin/pages/settings.php:93
-#: admin/pages/settings.php:97
+#: admin/pages/settings.php:93 admin/pages/settings.php:97
 msgid "(X)HTML version"
 msgstr "Versão (X)HTML"
 
-#: BIGFILE.php:637 admin/pages/settings.php:94
+#: admin/pages/settings.php:94
 msgid "Select the (X)HTML version that resembles your doctype."
 msgstr "Selecione a versão de (X)HTML compatível com o seu doctype."
 
-#: BIGFILE.php:642 BIGFILE.php:644 BIGFILE.php:646 admin/pages/settings.php:99
-#: admin/pages/settings.php:101 admin/pages/settings.php:103
+#: admin/pages/settings.php:99 admin/pages/settings.php:101
+#: admin/pages/settings.php:103
 msgid "Meta tag will look like"
 msgstr "A meta tag ficará assim:"
 
