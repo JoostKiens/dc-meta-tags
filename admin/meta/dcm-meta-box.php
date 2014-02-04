@@ -1,4 +1,4 @@
-<p><strong><a href="http://dublincore.org/documents/dces/" target="_blank"><?php _e('Dublin Core specification and information about recommended values'); ?></a></strong><p>
+<p><strong><a href="http://dublincore.org/documents/dces/" target="_blank"><?php _e('Dublin Core specification and information about recommended values', 'dc-meta-tags'); ?></a></strong><p>
 <table class="form-table">
 	<tbody>
 		<?php if ( $this->options['elem_contributor'] === 1 ) : ?>
@@ -7,7 +7,7 @@
 				<label for="elem_contributor[0]">
 					<?php _e("Contributor", 'dc-meta-tags' ); ?>
 				</label>
-				<?php echo_tooltip( __('An entity responsible for making contributions to the resource', 'dc-meta-tags') ); ?>
+				<?php dcm_echo_tooltip( __('An entity responsible for making contributions to the resource', 'dc-meta-tags') ); ?>
 			</th>
 			<td valign="top">
 				
@@ -49,7 +49,7 @@
 				<label for="elem_coverage">
 					<?php _e("Coverage", 'dc-meta-tags' ); ?>
 				</label>
-				<?php echo_tooltip( __('The spatial or temporal topic of the resource, the spatial applicability of the resource, or the jurisdiction under which the resource is relevant', 'dc-meta-tags') ); ?>
+				<?php dcm_echo_tooltip( __('The spatial or temporal topic of the resource, the spatial applicability of the resource, or the jurisdiction under which the resource is relevant', 'dc-meta-tags') ); ?>
 			</th>
 			<td valign="top">
 				<input type="text" id="elem_coverage" name="dcm_elem_coverage" value="<?php echo $values['elem_coverage']; ?>" size="25" />
@@ -63,7 +63,7 @@
 				<label for="elem_creator">
 					<?php _e("Creator", 'dc-meta-tags' ); ?>
 				</label>
-				<?php echo_tooltip( __('An entity primarily responsible for making the resource', 'dc-meta-tags') ); ?>
+				<?php dcm_echo_tooltip( __('An entity primarily responsible for making the resource', 'dc-meta-tags') ); ?>
 			</th>
 			<td valign="top">
 				<input type="text" id="elem_creator" name="dcm_elem_creator" value="<?php echo $values['elem_creator']; ?>" size="25" />
@@ -80,7 +80,7 @@
 				<label for="elem_description">
 					<?php _e("Description", 'dc-meta-tags' ); ?>
 				</label>
-				<?php echo_tooltip( __('An account of the resource', 'dc-meta-tags') ); ?>
+				<?php dcm_echo_tooltip( __('An account of the resource', 'dc-meta-tags') ); ?>
 			</th>
 			<td valign="top">
 				<textarea type="text" id="elem_description" name="dcm_elem_description" class="large-text" rows="3"><?php echo $values['elem_description']; ?></textarea>
@@ -97,7 +97,7 @@
 				<label for="elem_language">
 					<?php _e("Language", 'dc-meta-tags' ); ?>
 				</label>
-				<?php echo_tooltip( __('A language of the resource', 'dc-meta-tags') ); ?>
+				<?php dcm_echo_tooltip( __('A language of the resource', 'dc-meta-tags') ); ?>
 			</th>
 			<td valign="top">
 				<input type="text" id="elem_language" name="dcm_elem_language" value="<?php echo $values['elem_language']; ?>" size="25" />
@@ -111,7 +111,7 @@
 				<label for="elem_publisher">
 					<?php _e("Publisher", 'dc-meta-tags' ); ?>
 				</label>
-				<?php echo_tooltip( __('An entity responsible for making the resource available', 'dc-meta-tags') ); ?>
+				<?php dcm_echo_tooltip( __('An entity responsible for making the resource available', 'dc-meta-tags') ); ?>
 			</th>
 			<td valign="top">
 				<input type="text" id="elem_publisher" name="dcm_elem_publisher" value="<?php echo $values['elem_publisher']; ?>" size="25" />
@@ -125,7 +125,7 @@
 				<label for="elem_relation[0]">
 					<?php _e("Relations", 'dc-meta-tags' ); ?>
 				</label>
-				<?php echo_tooltip( __('A related resource', 'dc-meta-tags') ); ?>
+				<?php dcm_echo_tooltip( __('A related resource', 'dc-meta-tags') ); ?>
 			</th>
 			<td valign="top">
 				
@@ -170,7 +170,7 @@
 				<label for="elem_rights">
 					<?php _e("Rights", 'dc-meta-tags' ); ?>
 				</label>
-				<?php echo_tooltip( __('Information about rights held in and over the resource', 'dc-meta-tags') ); ?>
+				<?php dcm_echo_tooltip( __('Information about rights held in and over the resource', 'dc-meta-tags') ); ?>
 			</th>
 			<td valign="top">
 				<input type="text" id="elem_rights" name="dcm_elem_rights" value="<?php echo $values['elem_rights']; ?>" size="25" />
@@ -184,7 +184,7 @@
 				<label for="elem_source[0]">
 					<?php _e("Sources", 'dc-meta-tags' ); ?>
 				</label>
-				<?php echo_tooltip( __('A related resource from which the described resource is derived', 'dc-meta-tags') ); ?>
+				<?php dcm_echo_tooltip( __('A related resource from which the described resource is derived', 'dc-meta-tags') ); ?>
 			</th>
 			<td valign="top">
 				
@@ -226,7 +226,7 @@
 				<label for="elem_subject">
 					<?php _e("Subject", 'dc-meta-tags' ); ?>
 				</label>
-				<?php echo_tooltip( __('The topic of the resource', 'dc-meta-tags') ); ?>
+				<?php dcm_echo_tooltip( __('The topic of the resource', 'dc-meta-tags') ); ?>
 			</th>
 			<td valign="top">
 				<input type="text" id="elem_subject" name="dcm_elem_subject" value="<?php echo $values['elem_subject']; ?>" size="25" />
@@ -240,7 +240,7 @@
 				<label for="elem_title">
 					<?php _e("Title", 'dc-meta-tags' ); ?>
 				</label>
-				<?php echo_tooltip( __('A name given to the resource', 'dc-meta-tags') ); ?>
+				<?php dcm_echo_tooltip( __('A name given to the resource', 'dc-meta-tags') ); ?>
 			</th>
 			<td valign="top">
 				<input type="text" id="elem_title" name="dcm_elem_title" value="<?php echo $values['elem_title']; ?>" size="25" />

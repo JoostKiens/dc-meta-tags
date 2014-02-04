@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dc-meta-tags\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-01-17 22:22+0000\n"
-"PO-Revision-Date: 2014-01-17 22:29-0000\n"
+"POT-Creation-Date: 2014-01-30 23:50+0000\n"
+"PO-Revision-Date: 2014-01-30 23:26-0000\n"
 "Last-Translator: Júlio Reis <webmaster@arocha.org>\n"
 "Language-Team: \n"
 "Language: pt\n"
@@ -22,20 +22,27 @@ msgstr "Dublin Core Meta Tags"
 msgid "DC Meta Tags"
 msgstr "DC Meta Tags"
 
-#: admin/class-admin.php:144
+#. TRANSLATORS: first placeholder for plugin name, second for version number
+#: admin/class-admin.php:146
+#, php-format
+msgid "%1$s %2$s not activated"
+msgstr "%1$s %2$s não ativado"
+
+#. TRANSLATORS: first placeholder for current WordPress version, second for required version
+#: admin/class-admin.php:148
 #, php-format
 msgid ""
-"\"%s\" requires WordPress 3.3 or higher, and has been deactivated! Please "
-"upgrade WordPress and try again."
+"You are running WordPress version %1$s. This plugin requires version %2$s or "
+"higher, and has been deactivated! Please upgrade WordPress and try again."
 msgstr ""
-"O plugin \"%s\" requer no mínimo a versão 3.3 do WordPress, E foi "
-"desativado! Por favor atualize a sua versão do WordPress e tente novamente."
+"Está a correr o WordPress %1$s. Este plugin exige no mínimo a versão %2$s, e "
+"foi desativado! Por favor atualize o WordPress e tente novamente."
 
-#: admin/class-admin.php:145
+#: admin/class-admin.php:149
 msgid "Back to WordPress admin"
 msgstr "Regressar à página de administração do WordPress"
 
-#: admin/class-admin.php:164
+#: admin/class-admin.php:168
 msgid "Settings"
 msgstr "Configuração"
 
@@ -284,6 +291,22 @@ msgstr "Selecione a versão de (X)HTML compatível com o seu doctype."
 #: admin/pages/settings.php:103
 msgid "Meta tag will look like"
 msgstr "A meta tag ficará assim:"
+
+#~ msgid ""
+#~ "You are running WordPress version %1$s. This plugin requires version %1$s "
+#~ "or higher, and has been deactivated! Please upgrade WordPress and try "
+#~ "again."
+#~ msgstr ""
+#~ "Está a correr o WordPress %1$s. Este plugin exige no mínimo a versão "
+#~ "%1$s, e foi desativado! Por favor atualize o WordPress e tente novamente."
+
+#~ msgid ""
+#~ "\"%s\" requires WordPress 3.3 or higher, and has been deactivated! Please "
+#~ "upgrade WordPress and try again."
+#~ msgstr ""
+#~ "O plugin \"%s\" requer no mínimo a versão 3.3 do WordPress, E foi "
+#~ "desativado! Por favor atualize a sua versão do WordPress e tente "
+#~ "novamente."
 
 #~ msgid "Dublin Core specification & information about recommended values."
 #~ msgstr "Especificação Dublin Core, e informação sobre valores recomendados."

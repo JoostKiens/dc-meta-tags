@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-01-17 22:22+0000\n"
+"POT-Creation-Date: 2014-01-30 23:50+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -25,18 +25,25 @@ msgstr ""
 msgid "DC Meta Tags"
 msgstr ""
 
-#: admin/class-admin.php:144
+#. TRANSLATORS: first placeholder for plugin name, second for version number
+#: admin/class-admin.php:146
 #, php-format
-msgid ""
-"\"%s\" requires WordPress 3.3 or higher, and has been deactivated! Please "
-"upgrade WordPress and try again."
+msgid "%1$s %2$s not activated"
 msgstr ""
 
-#: admin/class-admin.php:145
+#. TRANSLATORS: first placeholder for current WordPress version, second for required version
+#: admin/class-admin.php:148
+#, php-format
+msgid ""
+"You are running WordPress version %1$s. This plugin requires version %2$s or "
+"higher, and has been deactivated! Please upgrade WordPress and try again."
+msgstr ""
+
+#: admin/class-admin.php:149
 msgid "Back to WordPress admin"
 msgstr ""
 
-#: admin/class-admin.php:164
+#: admin/class-admin.php:168
 msgid "Settings"
 msgstr ""
 

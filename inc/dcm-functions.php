@@ -61,9 +61,9 @@ function get_dcm_options() {
 /**
  * Print a question mark tooltip
  * @param  str  $str The title text for the tooltip
+ * @param  str  $tip The tooltip indicator (default: '?')
  * @return void
  */
-function echo_tooltip( $str ) {
-
-	printf( '<span class="icon-question" alt="%1$s" title="%1$s">?</span>', $str );
+function dcm_echo_tooltip( $str, $tip = '?' ) {
+	printf( '<span class="icon-question" alt="%1$s" title="%1$s">%2$s</span>', $str, $tip );
 }
