@@ -6,7 +6,7 @@ WordPress plugin for adding Dublin Core meta tags to wp_head on pages, posts & c
 * *Tags:* Dublin Core, meta tags, metadata, RDF
 * *Requires at least:* 3.3.0
 * *Tested up to:* 3.8.1
-* *Stable tag:* 0.2.2
+* *Stable tag:* 0.2.3
 * *License:* GPLv3
 * *License URI:* [http://www.gnu.org/licenses/gpl-3.0.html](http://www.gnu.org/licenses/gpl-3.0.html) or see the included `LICENSE.txt` and `LICENSE.md`
 
@@ -48,7 +48,7 @@ The metadata is automatically generated based on the post title, author, excerpt
 #### Can I override the generated metadata for specific posts?
 Yes, a meta box is available on the add/edit post screens.
 
-#### Where the hell is that meta box, I don't see it?
+#### Where is the meta box? I don't see it.
 Go to ‘Screen options’ and make sure ‘Dublin Core Metadata’ is checked.
 
 #### I don't like the unnessary closing slash in the HTML5 output. Can I remove it?
@@ -59,9 +59,9 @@ Changelog
 
 #### 0.2.3
 
-*(unreleased)*
+*Released 2014-02-10*
 
-* Fixed: Was picking wrong value for relation field
+* Fixed: Was picking wrong value for `relation` field
 
 #### 0.2.2
 
