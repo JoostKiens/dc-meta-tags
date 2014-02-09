@@ -59,7 +59,7 @@ Changelog
 
 #### 0.2.3
 
-*Released 2014-02-10*
+*Released 2014-02-09*
 
 * Fixed: Was picking wrong value for `relation` field
 
