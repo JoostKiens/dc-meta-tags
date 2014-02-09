@@ -1,17 +1,26 @@
 <?php 
+/**
+ * @package   Dublin Core Meta Tags
+ * @author    Joost Kiens, Júlio Reis
+ * @license   GPL-3.0
+ * @link      http://arocha.org
+ * @copyright 2014 A Rocha International
+ *
+ * @wordpress-plugin
+ * Plugin Name:       Dublin Core Meta Tags
+ * Plugin URI:        http://joostkiens.com/project/wp-dublin-core-metadata-plugin/
+ * Description:       Add Dublin Core meta tags to pages, posts & custom post types
+ * Version:           0.2.3
+ * Author:            Joost Kiens, Júlio Reis
+ * Author URI:        http://joostkiens.com/
+ * Text Domain:       dc-meta-tags
+ * License:           GPL-3.0
+ * License URI:       http://www.gnu.org/licenses/gpl-3.0.txt
+ * Domain Path:       /languages
+ * GitHub Plugin URI: https://github.com/JoostKiens/dc-meta-tags
+ * Requires at least: 3.3.0
+ */
 /*
-Plugin Name: Dublin Core Meta Tags
-Version: 0.2.2
-Plugin URI: http://joostkiens.com
-Description: Add Dublin Core meta tags to pages, posts & custom post types
-Author: Joost Kiens
-Author URI: http://joostkiens.com/
-License: GPL v3
-License URI:       http://www.gnu.org/licenses/gpl-3.0.txt
-GitHub Plugin URI: https://github.com/JoostKiens/dc-meta-tags
-Requires at least: 3.3.0
-Text domain: dc-meta-tags
-
 Dublin Core Meta Tags Plugin
 Copyright (C) 2012-2014, Joost Kiens - me@joostkiens.com
 
@@ -40,7 +49,7 @@ define( 'DCM_MAINFILE', __FILE__ );
 define( 'DCM_BASENAME', plugin_basename( __FILE__ ) );
 define( 'DCM_PATH', plugin_dir_path( __FILE__ ) );
 define( 'DCM_URL', plugin_dir_url( __FILE__ ) );
-define( 'DCM_VERSION', '0.2.2' );
+define( 'DCM_VERSION', '0.2.3' );
 define( 'DCM_MIN_WP_VERSION', '3.3.0');
 
 load_plugin_textdomain( 'dc-meta-tags', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
