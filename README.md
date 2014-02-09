@@ -57,6 +57,12 @@ Add `define ('DCM_HTML5_CLOSING_SLASH', false);` to your `wp-config.php` and you
 Changelog
 ---------------------------------
 
+#### 0.2.3
+
+*(unreleased)*
+
+* Fixed: Was picking wrong value for relation field
+
 #### 0.2.2
 
 *Released 2014-01-31*

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-01-30 23:50+0000\n"
+"POT-Creation-Date: 2014-02-04 10:18+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -25,13 +25,13 @@ msgstr ""
 msgid "DC Meta Tags"
 msgstr ""
 
-#. TRANSLATORS: first placeholder for plugin name, second for version number
+#. Translators: 1 is plugin name, 2 is version number
 #: admin/class-admin.php:146
 #, php-format
 msgid "%1$s %2$s not activated"
 msgstr ""
 
-#. TRANSLATORS: first placeholder for current WordPress version, second for required version
+#. Translators: 1 is current WordPress version, 2 is required version
 #: admin/class-admin.php:148
 #, php-format
 msgid ""

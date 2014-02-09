@@ -119,7 +119,7 @@ class DCM_Frontend {
 	}
 
 	/**
-	 * Get the dublin core elements and their values
+	 * Get the Dublin Core elements and their values
 	 * @return arr Array of dublin core elements with their values
 	 */
 	private function get_dc_properties() {
@@ -135,7 +135,7 @@ class DCM_Frontend {
 			'identifier'    => !empty( $this->options['elem_identifier'] ) ? $DCM_format->get_the_elem_value( 'elem_identifier' ) : '',
 			'language'      => !empty( $this->options['elem_language'] ) ? $DCM_format->get_the_elem_value( 'elem_language' ) : '',
 			'publisher'     => !empty( $this->options['elem_publisher'] ) ? $DCM_format->get_the_elem_value( 'elem_publisher' ) : '',
-			'relation'      => !empty( $this->options['elem_publisher'] ) ? $DCM_format->get_the_elem_value( 'elem_relation' ) : '',
+			'relation'      => !empty( $this->options['elem_relation'] ) ? $DCM_format->get_the_elem_value( 'elem_relation' ) : '',
 			'rights'        => !empty( $this->options['elem_rights'] ) ? $DCM_format->get_the_elem_value( 'elem_rights' ) : '',
 			'source'        => !empty( $this->options['elem_source'] ) ? $DCM_format->get_the_elem_value( 'elem_source' ) : '',
 			'subject'       => !empty( $this->options['elem_subject'] ) ? $DCM_format->get_the_elem_value( 'elem_subject' ) : '',
