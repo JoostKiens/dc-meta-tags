@@ -37,7 +37,11 @@ Installation
 
 1. Upload `dc-meta-tags` folder to the `/wp-content/plugins/` directory
 1. Activate the plugin through the ‘Plugins’ menu in WordPress
-1. Go to Settings > DC Meta Tags to configure it if necessary
+1. Go to _Settings > DC Meta Tags_ to configure it if necessary
+
+### Updates
+
+This plugin works with `github-updater`: turn it on to get automatic update notices when a new version is published on GitHub.
 
 Frequently Asked Questions
 ---------------------------------
@@ -57,40 +61,4 @@ Add `define ('DCM_HTML5_CLOSING_SLASH', false);` to your `wp-config.php` and you
 Changelog
 ---------------------------------
 
-#### 0.2.3
-
-*Released 2014-02-09*
-
-* Fixed: Was picking wrong value for `relation` field
-
-#### 0.2.2
-
-*Released 2014-01-31*
-
-* Fixed: Aborts if WordPress version is unsupported
-* Minimum WordPress version changed to 3.3.0, according to [Plugin-Datei Doktor](http://de.wpseek.com/pluginfilecheck/)
-* Added `LICENSE.txt` and `LICENSE.md` from [TheFox / GPLv3.md](https://github.com/TheFox/GPLv3.md)
-
-#### 0.2.1
-
-*Released 2014-01-25*
-
-* i18n ready
-* l10n: Portuguese (pt)
-* Tidied up text in the admin page
-* Moved help text to tooltips in the meta box, to tidy up the screen and avoid duplication of help text for multivalue fields
-
-#### 0.2.0
-
-*Released 2013-01-10*
-
-* Added meta box on posts to override auto-generated values
-* Added support for the following elements: Contributor, Relation, Source
-* Added uninstall functions to clean db
-* Ability to select on which post types metadata should appear
-
-#### 0.1.0
-
-*Released 2013-01-07*
-
-* Initial commit
+See `CHANGES.md`

@@ -8,7 +8,7 @@
  * @param int    $postid post ID of the post to get the value for
  * @return bool|mixed
  */
-function dcm_get_value( $val, $postid = 0 ) {
+function dcm_get_value( $key, $postid = 0 ) {
 	$postid = absint( $postid );
 	if ( $postid === 0 ) {
 		global $post;
@@ -17,9 +17,9 @@ function dcm_get_value( $val, $postid = 0 ) {
 		else
 			return false;
 	}
-	$custom = get_post_custom( $postid );
-	if ( !empty( $custom['_joost_dcm_' . $val][0] ) )
-		return maybe_unserialize( $custom['_joost_dcm_' . $val][0] );
+	$value = get_post_meta( $postid, '_joost_dcm_elem_' . $key, true );
+	if ( !empty( $value ) )
+		return $value;
 	else
 		return false;
 }
@@ -31,6 +31,15 @@ function dcm_get_value( $val, $postid = 0 ) {
  */
 function dcm_set_value( $meta, $val, $postid ) {
 	update_post_meta( $postid, '_joost_dcm_' . $meta, $val );
+}
+
+/**
+ * @param string $meta   the meta to change
+ * @param mixed  $val    the value to set the meta to
+ * @param int    $postid the ID of the post to change the meta for.
+ */
+function dcm_delete_meta( $meta, $postid ) {
+	delete_post_meta( $postid, '_joost_dcm_' . $meta );
 }
 
 /**
@@ -56,14 +65,4 @@ function get_dcm_options() {
 		$options = array_merge( $options, (array) get_option( $opt ) );
 	}
 	return $options;
-}
-
-/**
- * Print a question mark tooltip
- * @param  str  $str The title text for the tooltip
- * @param  str  $tip The tooltip indicator (default: '?')
- * @return void
- */
-function dcm_echo_tooltip( $str, $tip = '?' ) {
-	printf( '<span class="icon-question" alt="%1$s" title="%1$s">%2$s</span>', $str, $tip );
 }

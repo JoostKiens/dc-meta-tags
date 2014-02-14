@@ -10,7 +10,7 @@
  * Plugin Name:       Dublin Core Meta Tags
  * Plugin URI:        http://joostkiens.com/project/wp-dublin-core-metadata-plugin/
  * Description:       Add Dublin Core meta tags to pages, posts & custom post types
- * Version:           0.2.3
+ * Version:           0.3.0
  * Author:            Joost Kiens, Júlio Reis
  * Author URI:        http://joostkiens.com/
  * Text Domain:       dc-meta-tags
@@ -45,11 +45,14 @@ if ( !defined('DB_NAME') ) {
 	die;
 }
 
+// error reporting level - comment out after testing, as it interferes with other plugins
+// error_reporting( E_STRICT | E_ALL );
+
 define( 'DCM_MAINFILE', __FILE__ );
 define( 'DCM_BASENAME', plugin_basename( __FILE__ ) );
 define( 'DCM_PATH', plugin_dir_path( __FILE__ ) );
 define( 'DCM_URL', plugin_dir_url( __FILE__ ) );
-define( 'DCM_VERSION', '0.2.3' );
+define( 'DCM_VERSION', '0.3.0' );
 define( 'DCM_MIN_WP_VERSION', '3.3.0');
 
 load_plugin_textdomain( 'dc-meta-tags', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
@@ -57,16 +60,17 @@ load_plugin_textdomain( 'dc-meta-tags', false, dirname( plugin_basename( __FILE_
 /**
  * Required by admin & frontend
  */
-require DCM_PATH . 'inc/dcm-functions.php';
-require DCM_PATH . 'frontend/class-format.php';
+require DCM_PATH . 'admin/class-dcm-base.php';
+require DCM_PATH . 'admin/inc-dcm-functions.php';
+require DCM_PATH . 'frontend/class-dcm-format.php';
 
 /**
  * Initialize DCM admin functionality
  * @return void
  */
 function dcm_admin_init() {
-	require DCM_PATH.'admin/class-admin.php';
-	require DCM_PATH.'admin/class-meta-box.php';
+	require DCM_PATH . 'admin/class-dcm-admin.php';
+	require DCM_PATH . 'admin/class-dcm-meta-box.php';
 	
 	add_action( 'admin_enqueue_scripts', 'dcm_load_admin_scripts' );
 }
@@ -85,7 +89,7 @@ function dcm_load_admin_scripts() {
  * @return void
  */
 function dcm_frontend_init() {
-	require DCM_PATH . 'frontend/class-frontend.php';
+	require DCM_PATH . 'frontend/class-dcm-frontend.php';
 }
 
 if ( is_admin() ) {
