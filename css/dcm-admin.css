@@ -17,7 +17,7 @@
 	margin-left: 4px;
 	margin-right: 4px;
 	background: #fcfcfc;
-	color: #ddd;
+	color: #bbb;
 	border: 1px solid #ddd;
 	border-radius: 10px;
 	cursor: pointer;
@@ -29,4 +29,23 @@
 .icon-question:hover {
 	color: black;
 	border: 1px solid black;
+}
+
+/* for the Element and Mode cells in the settings page */
+.tight-fit, .form-table th.tight-fit, .form-table td.tight-fit {
+	white-space: nowrap;
+}
+/* for the Default value cell in the settings page */
+.form-table th.input-box-height, .form-table td.input-box-height {
+	vertical-align: top;
+	line-height: 120%;
+}
+.form-table td, .form-table th {
+	padding: 5px 5px; /* was 15px 10px */
+}
+.form-table tr {
+	border-top: 1px dotted #cccccc;
+}
+.form-table tr:last-child {
+	border-bottom: 1px dotted #cccccc;
 }

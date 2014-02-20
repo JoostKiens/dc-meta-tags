@@ -8,15 +8,15 @@
 if( !defined( 'ABSPATH' ) && !defined( 'WP_UNINSTALL_PLUGIN' ) )
 	exit();
 
-/* remove plugin options */
+delete_option( DCM_OPTION_NAME ); /* remove plugin options */
 
-$plugin_options = array(
-		'_joost_dcm_options',
-);
-
-foreach ( $plugin_options as $option) {
-	delete_option( $option );
+/* maybe I'm paranoid... but if DCM_FIELD_PREFIX is empty, the query below would delete all the metadata from WordPress! So, better make sure that's not the case */
+if( !DCM_FIELD_PREFIX ) {
+	wpdie( "<p>DCM_FIELD_PREFIX = '{DCM_FIELD_PREFIX}'!</p>" );
 }
 
 /* remove meta from posts and pages */
-$wpdb->query( "DELETE FROM $wpdb->postmeta WHERE meta_key LIKE '_joost_dcm_%'" );
+$wpdb->query( $wpdb->prepare(
+	"DELETE FROM $wpdb->postmeta WHERE meta_key LIKE '%s'",
+	DCM_FIELD_PREFIX.'%' )
+);
