@@ -1,48 +1,50 @@
 Change log for Dublin Core Meta Tags
 ------------------------------------
 
+#### 0.4.0
+
+*Released 2014-02-20*
+
+* Added: three modes for fields: disabled, default only, and editable
+* Added: flexible default values for all fields: none, any text, or special values obtained from WP or the current post
+* Improved: much code rewrite: fully object-oriented; higher cohesion of some classes; common services moved to a base class; options retrieved only once
+
 #### 0.3.0
 
 *Released 2014-02-14*
 
-Enhancements:
-
-* Accepts values for Date, Format, Identifier and Type (complete coverage of Dublin Core fields 1.1)
-* All fields accept multiple values
-* Empty meta no longer saved as empty, but deleted; deletes empty meta written by previous versions
-* l10n for default meta values
-* Tooltips on settings page
-* Detects install, upgrade and downgrade
-* More efficient uninstall
-* More efficient metadata retrieval
-
-Bug fixes:
-
-* l10n: Bad filenames for pt_PT
+* Added: Coverage for Date, Format, Identifier and Type (complete coverage of Dublin Core fields 1.1)
+* Added: Multi-value input for all fields
+* Added: l10n for default meta values
+* Improved: Detects install, upgrade and downgrade
+* Improved: Empty meta no longer saved as empty, but deleted; deletes empty meta written by previous versions
+* Improved: More efficient uninstall
+* Improved: More efficient metadata retrieval
+* Fixed: Bad l10n filenames for pt_PT
 
 #### 0.2.3
 
 *Released 2014-02-09*
 
-* Fix: Was picking wrong value for `relation` field
-* Upgrades via `github-updater`
+* Added: Upgrades via `github-updater`
+* Fixed: Was picking wrong value for `relation` field
 
 #### 0.2.2
 
 *Released 2014-01-31*
 
-* Fix to Abort if WordPress version is unsupported
-* Minimum WordPress version changed to 3.3.0, according to [Plugin-Datei Doktor](http://de.wpseek.com/pluginfilecheck/)
-* Added `LICENSE.txt` and `LICENSE.md` from [TheFox / GPLv3.md](https://github.com/TheFox/GPLv3.md)
+* Added: `LICENSE.txt` and `LICENSE.md` from [TheFox / GPLv3.md](https://github.com/TheFox/GPLv3.md)
+* Improved: Minimum WordPress version changed to 3.3.0, according to [Plugin-Datei Doktor](http://de.wpseek.com/pluginfilecheck/)
+* Fixed: Abort if WordPress version is unsupported
 
 #### 0.2.1
 
 *Released 2014-01-25*
 
-* i18n ready
-* l10n: Portuguese (pt)
-* Tidied up text in the admin page
-* Moved help text to tooltips in the meta box, to tidy up the screen and avoid duplication of help text for multivalue fields
+* Added: i18n ready
+* Added: l10n: Portuguese (pt)
+* Improved: Tidied up text in the admin page
+* Improved: Moved help text to tooltips in the meta box, to tidy up the screen and avoid duplication of help text for multivalue fields
 
 #### 0.2.0
 

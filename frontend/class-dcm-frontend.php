@@ -12,9 +12,7 @@ class DCM_Frontend extends DCM_Base {
 
 	public function __construct() {
 		parent::__construct();
-
 		// Add metadata to wp_head
-		$this->options = get_dcm_options();
 		add_action( 'wp_head', array( $this, 'dcm_add_meta' ) );
 	}
 
@@ -23,6 +21,7 @@ class DCM_Frontend extends DCM_Base {
 	 * @return void
 	 */
 	public function dcm_add_meta() {
+		$this->init_vars();
 		if ( !empty ( $this->options ) && in_array( get_post_type(), $this->options['post_types'] ) && ( is_single() || is_page() ) ) {
 			if ( $this->options['output_html'] === 'html5' ) {
 				// HTML5
@@ -31,7 +30,6 @@ class DCM_Frontend extends DCM_Base {
 				// XHTML1 or HTML4
 				$output = $this->_get_xhtml_output();
 			}
-
 			echo $output;
 		}
 	}
@@ -64,7 +62,7 @@ class DCM_Frontend extends DCM_Base {
 		$line_ending = ( $this->options['output_html'] === 'html4' ) ? ">\n" : " />\n";
 
 		// The meta values
-		$dc_properties = $this->get_dc_properties();
+		$dc_properties = $this->get_head_properties();
 
 		$output = '<link rel="schema.DC" href="http://purl.org/DC/elements/1.1/"' . $line_ending;
 		foreach ( $dc_properties as $name => $value ) {
@@ -84,7 +82,6 @@ class DCM_Frontend extends DCM_Base {
 				}
 			}
 		}
-
 		return $output;
 	}
 
@@ -95,7 +92,7 @@ class DCM_Frontend extends DCM_Base {
 	private function _get_html5_output() {
 
 		// The meta values
-		$dc_properties = $this->get_dc_properties();
+		$dc_properties = $this->get_head_properties();
 
 		// Line endings: either HTML or XHTML style
 		$line_ending = ( defined( 'DCM_HTML5_CLOSING_SLASH') && DCM_HTML5_CLOSING_SLASH === false ) ? ">\n" : " />\n";
@@ -115,34 +112,35 @@ class DCM_Frontend extends DCM_Base {
 				}
 			}
 		}
-
 		return $output;
 	}
 
 	/**
-	 * Get the Dublin Core elements and their values
-	 * @return arr Array of dublin core elements with their values
+	 * Get the Dublin Core elements and their values for the <head> section
+	 * @return arr Array of Dublin Core elements with their values
 	 */
-	private function get_dc_properties() {
-		$DCM_format = new DCM_Format;
-		$dc_properties = array(
-			'contributor'   => !empty( $this->options['elem_contributor'] ) ? $DCM_format->get_the_elem_value( 'contributor' ) : '',
-			'coverage'      => !empty( $this->options['elem_coverage'] ) ? $DCM_format->get_the_elem_value( 'coverage' ) : '',
-			'creator'       => !empty( $this->options['elem_creator'] ) ? $DCM_format->get_the_elem_value( 'creator' ) : '',
-			'date'          => !empty( $this->options['elem_date'] ) ? $DCM_format->get_the_elem_value( 'date' ) : '',
-			'description'   => !empty( $this->options['elem_description'] ) ? $DCM_format->get_the_elem_value( 'description' ) : '',
-			'format'        => !empty( $this->options['elem_format'] ) ? $DCM_format->get_the_elem_value( 'format' ) : '',
-			'identifier'    => !empty( $this->options['elem_identifier'] ) ? $DCM_format->get_the_elem_value( 'identifier' ) : '',
-			'language'      => !empty( $this->options['elem_language'] ) ? $DCM_format->get_the_elem_value( 'language' ) : '',
-			'publisher'     => !empty( $this->options['elem_publisher'] ) ? $DCM_format->get_the_elem_value( 'publisher' ) : '',
-			'relation'      => !empty( $this->options['elem_relation'] ) ? $DCM_format->get_the_elem_value( 'relation' ) : '',
-			'rights'        => !empty( $this->options['elem_rights'] ) ? $DCM_format->get_the_elem_value( 'rights' ) : '',
-			'source'        => !empty( $this->options['elem_source'] ) ? $DCM_format->get_the_elem_value( 'source' ) : '',
-			'subject'       => !empty( $this->options['elem_subject'] ) ? $DCM_format->get_the_elem_value( 'subject' ) : '',
-			'title'         => !empty( $this->options['elem_title'] ) ? $DCM_format->get_the_elem_value( 'title' ) : '',
-			'type'          => !empty( $this->options['elem_type'] ) ? $DCM_format->get_the_elem_value( 'type' ) : '',
-		);
-		return $dc_properties;
+	private function get_head_properties() {
+		$this->init_vars();
+		$head = array();
+		$head['my-excerpt'] = $this->generate_excerpt();
+		foreach( $this->fields as $field ) {
+			$mode = $this->options[ $field.'_mode' ];
+			if( $mode === 'disabled' )
+				continue;
+			if( $mode === 'editable' ) {
+				$values = $this->get_field_db_value( $field );
+				if( $values ) {
+					$head[ $field ] = $values;
+					continue;
+				}
+			}
+			// at this point, we rely on the default value:
+			// the field is either default only, or editable but without a value
+			$value = $this->get_field_default_value( $field );
+			if( $value )
+				$head[ $field ] = $value;
+		}
+		return $head;
 	}
 }
 

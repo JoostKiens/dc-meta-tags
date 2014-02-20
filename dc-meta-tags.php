@@ -10,8 +10,8 @@
  * Plugin Name:       Dublin Core Meta Tags
  * Plugin URI:        http://joostkiens.com/project/wp-dublin-core-metadata-plugin/
  * Description:       Add Dublin Core meta tags to pages, posts & custom post types
- * Version:           0.3.0
- * Author:            Joost Kiens, Júlio Reis
+ * Version:           0.4.0
+ * Author:            Joost Kiens
  * Author URI:        http://joostkiens.com/
  * Text Domain:       dc-meta-tags
  * License:           GPL-3.0
@@ -45,15 +45,18 @@ if ( !defined('DB_NAME') ) {
 	die;
 }
 
-// error reporting level - comment out after testing, as it interferes with other plugins
-// error_reporting( E_STRICT | E_ALL );
+// error_reporting( E_STRICT | E_ALL ); // error reporting, comment out after testing
 
 define( 'DCM_MAINFILE', __FILE__ );
 define( 'DCM_BASENAME', plugin_basename( __FILE__ ) );
 define( 'DCM_PATH', plugin_dir_path( __FILE__ ) );
 define( 'DCM_URL', plugin_dir_url( __FILE__ ) );
-define( 'DCM_VERSION', '0.3.0' );
+define( 'DCM_VERSION', '0.4.0' );
 define( 'DCM_MIN_WP_VERSION', '3.3.0');
+define( 'DCM_OPTION_NAME', 'dc_meta_tags_options' );
+define( 'DCM_OPTION_GROUP', 'dc_meta_tags_options_group' );
+define( 'DCM_SETTINGS_SLUG', 'dcm_settings' );
+define( 'DCM_FIELD_PREFIX', '_joost_dcm_elem_' );
 
 load_plugin_textdomain( 'dc-meta-tags', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
 
@@ -61,8 +64,6 @@ load_plugin_textdomain( 'dc-meta-tags', false, dirname( plugin_basename( __FILE_
  * Required by admin & frontend
  */
 require DCM_PATH . 'admin/class-dcm-base.php';
-require DCM_PATH . 'admin/inc-dcm-functions.php';
-require DCM_PATH . 'frontend/class-dcm-format.php';
 
 /**
  * Initialize DCM admin functionality

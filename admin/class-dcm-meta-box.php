@@ -22,28 +22,6 @@ class DCM_Meta_box extends DCM_Base {
 		// TODO remove values when uninstall
 		add_action( 'add_meta_boxes', array( $this, 'add_meta_box' ) );
 		add_action( 'save_post', array( $this, 'save_postdata' ) );
-		$this->DCM_format = new DCM_format;
-		$this->options = get_dcm_options();
-
-		// elements to save
-		// TODO remove all these multiple lists of elements
-		$this->meta_box_elem = array(
-			'elem_contributor',
-			'elem_coverage',
-			'elem_creator',
-			'elem_date',
-			'elem_description',
-			'elem_format',
-			'elem_identifier',
-			'elem_language',
-			'elem_publisher',
-			'elem_relation',
-			'elem_rights',
-			'elem_source',
-			'elem_subject',
-			'elem_title',
-			'elem_type',
-		);
 	}
 
 	/**
@@ -51,6 +29,7 @@ class DCM_Meta_box extends DCM_Base {
 	 * @return  void
 	 */
 	public function add_meta_box() {
+		$this->init_vars();
 		foreach ( $this->options['post_types'] as $post_type ) {
 			add_meta_box(
 				'dcm',
@@ -101,14 +80,22 @@ class DCM_Meta_box extends DCM_Base {
 	 * @return void
 	 */
 	public function render_field( $field ) {
-		$key = 'elem_'.$field;
-		$values = $this->DCM_format->get_the_elem_value( $field );
-		if( $this->options[ $key ] == 1 ) {
+		// only display editable fields
+		if( $this->options[ $field.'_mode' ] == 'editable' ) {
 		
-			printf( "<tr>\n\t<th scope=\"row\">\t\t<label for=\"elem_%s[0]\">", $field );
+			// try getting a value from the database
+			$values = $this->get_field_db_value( $field );
+			if( !$values ) {
+				// no value in db, get default
+				$default = $this->get_field_default_value( $field );
+				if( $default )
+					$values = array( $default ); // default is scalar, we need array
+			}
+
+			echo( "<tr>\n\t<td>" );
 			DCM_Base::the_label( $field );
-			echo( "</label>\n" );
-			DCM_Base::the_tooltip( $field );
+			echo(" ");
+			DCM_Base::the_element_tooltip( $field );
 			echo( "\n</th>\n" );
 			echo( "<td valign=\"top\">" );
 			echo( "<ul id=\"elem_$field-repeatable\" class=\"custom_repeatable\">" );
@@ -128,20 +115,77 @@ class DCM_Meta_box extends DCM_Base {
 			}
 	
 			echo( "</ul>" );
-			echo( "<a class=\"repeatable-add button\" href=\"#\">" );
-			DCM_Base::add_another_field( $field );
-			echo( "</a>\n" );
+			self::add_another_field( $field );
 			echo( "</td>" );
 			echo( "</tr>" );
 		}
 	}
 
 	/**
+	 * Prints the "Add another ..." button for the specified metadata
+	 * @param  str $meta The metadata
+	 * @return nothing
+	 */
+	static function add_another_field( $meta ) {
+		echo( "<a class=\"repeatable-add button\" href=\"#\">" );
+		switch( $meta ) {
+		case 'contributor':
+			_e('Add another contributor', 'dc-meta-tags');
+			return;
+		case 'coverage':
+			_e('Add another coverage', 'dc-meta-tags');
+			return;
+		case 'creator':
+			_e('Add another creator', 'dc-meta-tags');
+			return;
+		case 'date':
+			_e('Add another date', 'dc-meta-tags');
+			return;
+		case 'description':
+			_e('Add another description', 'dc-meta-tags');
+			return;
+		case 'format':
+			_e('Add another format', 'dc-meta-tags');
+			return;
+		case 'identifier':
+			_e('Add another identifier', 'dc-meta-tags');
+			return;
+		case 'language':
+			_e('Add another language', 'dc-meta-tags');
+			return;
+		case 'publisher':
+			_e('Add another publisher', 'dc-meta-tags');
+			return;
+		case 'relation':
+			_e('Add another relation', 'dc-meta-tags');
+			return;
+		case 'rights':
+			_e('Add another rights statement', 'dc-meta-tags');
+			return;
+		case 'source':
+			_e('Add another source', 'dc-meta-tags');
+			return;
+		case 'subject':
+			_e('Add another subject', 'dc-meta-tags');
+			return;
+		case 'title':
+			_e('Add another title', 'dc-meta-tags');
+			return;
+		case 'type':
+			_e('Add another type', 'dc-meta-tags');
+			return;
+		}
+		echo( "</a>\n" );
+	}
+	
+	/**
 	 * When the post is saved, saves our data
 	 * @param  int    $post_id The ID of the post
 	 * @return void
 	 */
 	public function save_postdata( $post_id ) {
+	
+		$this->init_vars();
 	
 		// verify if this is an auto save routine. 
 		// If it is, our form has not been submitted, 
@@ -151,7 +195,9 @@ class DCM_Meta_box extends DCM_Base {
 
 		// verify this came from our screen and with proper authorization,
 		// because save_post can be triggered at other times
-		if ( !wp_verify_nonce( $_POST['dcm_nonce'], DCM_BASENAME ) )
+		// Is triggered by Add New Post, when $_POST['dcm_nonce'] isn't set
+		if ( !isset( $_POST['dcm_nonce'] )
+			|| !wp_verify_nonce( $_POST['dcm_nonce'], DCM_BASENAME ) )
 			return;
 
 		// Check permissions
@@ -164,24 +210,24 @@ class DCM_Meta_box extends DCM_Base {
 		}
 
 		// Still here? Find and save the data
-		foreach ( $this->meta_box_elem as $elem ) {
-			$key = 'dcm_' . $elem;
+		foreach( $this->fields as $field ) {
+			$key = 'dcm_elem_' . $field;
 			if( !DCM_Base::has_data( $key, $_POST ) ) {
 				// there's no data, remove meta
-				dcm_delete_meta( $elem, $_POST['post_ID'] );
+				DCM_Base::delete_meta( $_POST['post_ID'], $field );
 				continue;
 			}
+
 			// we have meta, sanitize and update
 			$mydata = array();
 			foreach( $_POST[ $key ] as $val ) {
 				$mydata[] = sanitize_text_field( $val );
 			}
-			dcm_set_value( $elem, $mydata, $_POST['post_ID'] );
+			DCM_Base::write_meta( $_POST['post_ID'], $field, $mydata );
 		}
 	}
 	
 }
 
-// Globalize the var first as it's needed globally.
-global $dcm_meta_box;
+global $dcm_meta_box; // Globalize the var first as it's needed globally
 $dcm_meta_box = new DCM_Meta_box();
