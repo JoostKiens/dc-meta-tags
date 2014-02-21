@@ -1,7 +1,13 @@
 Change log for Dublin Core Meta Tags
 ------------------------------------
 
-#### 0.4.0
+#### 0.4.1
+
+*Released 2014-02-21*
+
+* Added: Integration with [Transifex](https://www.transifex.com/projects/p/dc-meta-tags/) for community translation
+* Added: Complete translation: pt_PT
+* Added: 43 very incomplete translations (>10% done)
 
 *Released 2014-02-20*
 

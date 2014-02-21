@@ -6,7 +6,7 @@ WordPress plugin for adding Dublin Core meta tags to wp_head on pages, posts & c
 * *Tags:* Dublin Core, meta tags, metadata, RDF
 * *Requires at least:* 3.3.0
 * *Tested up to:* 3.8.1
-* *Stable tag:* 0.4.0
+* *Stable tag:* 0.4.1
 * *License:* GPLv3
 * *License URI:* [http://www.gnu.org/licenses/gpl-3.0.html](http://www.gnu.org/licenses/gpl-3.0.html) or see the included `LICENSE.txt` and `LICENSE.md`
 
@@ -52,6 +52,10 @@ Installation
 
 This plugin works with `github-updater`: turn it on to get automatic update notices when a new version is published on GitHub.
 
+### Translations
+
+This plugin’s translations are managed via Transifex. To help out, please go to [https://www.transifex.com/projects/p/dc-meta-tags/](https://www.transifex.com/projects/p/dc-meta-tags/). Thank you!
+
 Frequently Asked Questions
 ---------------------------------
 
@@ -82,4 +86,4 @@ Likewise, if the plugin is removed, all the metadata is removed from the databas
 Changelog
 ---------------------------------
 
-See `CHANGES.md`
+See [CHANGES.md](CHANGES.md)

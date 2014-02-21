@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-02-18 02:59+0000\n"
+"POT-Creation-Date: 2014-02-20 22:18+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -203,7 +203,7 @@ msgid "The nature or genre of the resource"
 msgstr ""
 
 #. Translators: predefined default value for Coverage
-#: admin/class-dcm-base.php:419 admin/class-dcm-settings-page.php:251
+#: admin/class-dcm-base.php:419 admin/class-dcm-settings-page.php:250
 msgid "World"
 msgstr ""
 
@@ -409,54 +409,54 @@ msgstr ""
 msgid "Meta tag will look like"
 msgstr ""
 
-#: admin/class-dcm-settings-page.php:250 admin/class-dcm-settings-page.php:346
+#: admin/class-dcm-settings-page.php:249 admin/class-dcm-settings-page.php:345
 #, php-format
 msgid "‘%s’"
 msgstr ""
 
-#: admin/class-dcm-settings-page.php:259
+#: admin/class-dcm-settings-page.php:258
 msgid "The post’s author"
 msgstr ""
 
-#: admin/class-dcm-settings-page.php:267
+#: admin/class-dcm-settings-page.php:266
 msgid "The post’s published date"
 msgstr ""
 
-#: admin/class-dcm-settings-page.php:275
+#: admin/class-dcm-settings-page.php:274
 msgid "The post’s excerpt"
 msgstr ""
 
-#: admin/class-dcm-settings-page.php:283
+#: admin/class-dcm-settings-page.php:282
 msgid "The post’s MIME type (if set)"
 msgstr ""
 
-#: admin/class-dcm-settings-page.php:291
+#: admin/class-dcm-settings-page.php:290
 msgid "The post’s permalink"
 msgstr ""
 
-#: admin/class-dcm-settings-page.php:299
+#: admin/class-dcm-settings-page.php:298
 #, php-format
 msgid "The WordPress installation language (‘%s’)"
 msgstr ""
 
-#: admin/class-dcm-settings-page.php:307
+#: admin/class-dcm-settings-page.php:306
 #, php-format
 msgid "The website’s title (‘%s’)"
 msgstr ""
 
-#: admin/class-dcm-settings-page.php:318
+#: admin/class-dcm-settings-page.php:317
 msgid "Value from Creative Commons Configurator plugin (if active)"
 msgstr ""
 
-#: admin/class-dcm-settings-page.php:321
+#: admin/class-dcm-settings-page.php:320
 msgid "Suggestion: the full URL (incl. http://) to your copyrights page"
 msgstr ""
 
-#: admin/class-dcm-settings-page.php:330
+#: admin/class-dcm-settings-page.php:329
 msgid "List of categories and tags (only for posts)"
 msgstr ""
 
-#: admin/class-dcm-settings-page.php:338
+#: admin/class-dcm-settings-page.php:337
 msgid "The post’s title"
 msgstr ""
 
