@@ -8,32 +8,32 @@ msgstr ""
 "Project-Id-Version: DC Meta Tags\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-02-20 22:18+0000\n"
-"PO-Revision-Date: 2014-02-21 08:43+0000\n"
-"Last-Translator: Júlio Reis\n"
-"Language-Team: Portuguese (Portugal) (http://www.transifex.com/projects/p/wp-translations/language/pt_PT/)\n"
+"PO-Revision-Date: 2014-02-20 22:30+0000\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Hebrew (Israel) (http://www.transifex.com/projects/p/wp-translations/language/he_IL/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: pt_PT\n"
+"Language: he_IL\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: admin/class-dcm-admin.php:40 admin/class-dcm-settings-page.php:45
 msgid "Dublin Core Meta Tags"
-msgstr "Dublin Core Meta Tags"
+msgstr ""
 
 #: admin/class-dcm-admin.php:41
 msgid "DC Meta Tags"
-msgstr "DC Meta Tags"
+msgstr ""
 
 #: admin/class-dcm-admin.php:57
 msgid "Thank you for installing DC Meta Tags."
-msgstr "Obrigado por instalar DC Meta Tags."
+msgstr ""
 
 #. Translators: 1 is plugin name, 2 is version number
 #: admin/class-dcm-admin.php:86
 #, php-format
 msgid "%1$s %2$s not activated"
-msgstr "%1$s %2$s não ativado"
+msgstr ""
 
 #. Translators: 1 is current WordPress version, 2 is required version
 #: admin/class-dcm-admin.php:88
@@ -41,11 +41,11 @@ msgstr "%1$s %2$s não ativado"
 msgid ""
 "You are running WordPress version %1$s. This plugin requires version %2$s or"
 " higher, and has been deactivated! Please upgrade WordPress and try again."
-msgstr "Está a correr o WordPress %1$s. Este plugin exige no mínimo a versão %2$s, e foi desativado! Por favor atualize o WordPress e tente novamente."
+msgstr ""
 
 #: admin/class-dcm-admin.php:89
 msgid "Back to WordPress admin"
-msgstr "Regressar à página de administração do WordPress"
+msgstr ""
 
 #. Translators: a separator between items on a list
 #: admin/class-dcm-admin.php:103 admin/class-dcm-base.php:488
@@ -56,264 +56,264 @@ msgstr ", "
 #, php-format
 msgid "Settings updated. %s metadata record deleted for %s."
 msgid_plural "Settings updated. %s metadata records deleted from %s."
-msgstr[0] "Configuração atualizada. %s registo de metadados apagado para %s."
-msgstr[1] "Configuração atualizada. %s registos de metadados apagados para %s."
+msgstr[0] ""
+msgstr[1] ""
 
 #: admin/class-dcm-admin.php:179
 msgid "Settings"
-msgstr "Configurações"
+msgstr "הגדרות"
 
 #: admin/class-dcm-base.php:235
 msgid "Contributor"
-msgstr "Colaborador(a)"
+msgstr "תורם"
 
 #: admin/class-dcm-base.php:237
 msgid "Coverage"
-msgstr "Cobertura"
+msgstr ""
 
 #: admin/class-dcm-base.php:239
 msgid "Creator"
-msgstr "Criador(a)"
+msgstr ""
 
 #: admin/class-dcm-base.php:241
 msgid "Date"
-msgstr "Data"
+msgstr "תאריך"
 
 #: admin/class-dcm-base.php:243
 msgid "Description"
-msgstr "Descrição"
+msgstr "תיאור"
 
 #: admin/class-dcm-base.php:245
 msgid "Format"
-msgstr "Formato"
+msgstr "סוג תוכן"
 
 #: admin/class-dcm-base.php:247
 msgid "Identifier"
-msgstr "Identificador"
+msgstr ""
 
 #: admin/class-dcm-base.php:249
 msgid "Language"
-msgstr "Língua"
+msgstr ""
 
 #: admin/class-dcm-base.php:251
 msgid "Publisher"
-msgstr "Publicador(a)"
+msgstr ""
 
 #: admin/class-dcm-base.php:253
 msgid "Relation"
-msgstr "Relação"
+msgstr ""
 
 #: admin/class-dcm-base.php:255
 msgid "Rights"
-msgstr "Direitos"
+msgstr ""
 
 #: admin/class-dcm-base.php:257
 msgid "Source"
-msgstr "Fonte"
+msgstr "מקור"
 
 #: admin/class-dcm-base.php:259
 msgid "Subject"
-msgstr "Assunto"
+msgstr "נושא"
 
 #: admin/class-dcm-base.php:261
 msgid "Title"
-msgstr "Título"
+msgstr "כותרת"
 
 #: admin/class-dcm-base.php:263
 msgid "Type"
-msgstr "Tipo"
+msgstr "סוג"
 
 #. Translators: official definition for the Dublin Core field Contributor
 #: admin/class-dcm-base.php:295
 msgid "An entity responsible for making contributions to the resource"
-msgstr "Uma entidade responsável por fazer contribuições para o recurso"
+msgstr ""
 
 #. Translators: official definition for the Dublin Core field Coverage
 #: admin/class-dcm-base.php:298
 msgid ""
 "The spatial or temporal topic of the resource, the spatial applicability of "
 "the resource, or the jurisdiction under which the resource is relevant"
-msgstr "O tópico espacial ou temporal do recurso, a aplicabilidade espacial do recurso, ou a jurisdição sob a qual o recurso é relevante"
+msgstr ""
 
 #. Translators: official definition for the Dublin Core field Creator
 #: admin/class-dcm-base.php:301
 msgid "An entity primarily responsible for making the resource"
-msgstr "Uma entidade que é a responsável primária pela criação do recurso"
+msgstr ""
 
 #. Translators: official definition for the Dublin Core field Date
 #: admin/class-dcm-base.php:304
 msgid ""
 "A point or period of time associated with an event in the lifecycle of the "
 "resource"
-msgstr "Um ponto no tempo, ou período associado com um evento, do ciclo de vida do recurso"
+msgstr ""
 
 #. Translators: official definition for the Dublin Core field Description
 #: admin/class-dcm-base.php:307
 msgid "An account of the resource"
-msgstr "Uma descrição do recurso"
+msgstr ""
 
 #. Translators: official definition for the Dublin Core field Format
 #: admin/class-dcm-base.php:310
 msgid "The file format, physical medium, or dimensions of the resource"
-msgstr "O formato de ficheiro, meio físico, ou dimensões do recurso"
+msgstr ""
 
 #. Translators: official definition for the Dublin Core field Identifier
 #: admin/class-dcm-base.php:313
 msgid "An unambiguous reference to the resource within a given context"
-msgstr "Uma referência não ambígua ao recurso, dentro de determinado contexto"
+msgstr ""
 
 #. Translators: official definition for the Dublin Core field Language
 #: admin/class-dcm-base.php:316
 msgid "A language of the resource"
-msgstr "Uma língua do recurso"
+msgstr ""
 
 #. Translators: official definition for the Dublin Core field Publisher
 #: admin/class-dcm-base.php:319
 msgid "An entity responsible for making the resource available"
-msgstr "Uma entidade responsável pela disponibilização do recurso"
+msgstr ""
 
 #. Translators: official definition for the Dublin Core field Relation
 #: admin/class-dcm-base.php:322
 msgid "A related resource"
-msgstr "Um recurso relacionado"
+msgstr ""
 
 #. Translators: official definition for the Dublin Core field Rights
 #: admin/class-dcm-base.php:325
 msgid "Information about rights held in and over the resource"
-msgstr "Informação sobre os direitos detidos sobre o recurso"
+msgstr ""
 
 #. Translators: official definition for the Dublin Core field Source
 #: admin/class-dcm-base.php:328
 msgid "A related resource from which the described resource is derived"
-msgstr "Um recurso relacionado, do qual o recurso descrito foi derivado"
+msgstr ""
 
 #. Translators: official definition for the Dublin Core field Subject
 #: admin/class-dcm-base.php:331
 msgid "The topic of the resource"
-msgstr "O tópico do recurso"
+msgstr ""
 
 #. Translators: official definition for the Dublin Core field Title
 #: admin/class-dcm-base.php:334
 msgid "A name given to the resource"
-msgstr "Um nome dado ao recurso"
+msgstr ""
 
 #. Translators: official definition for the Dublin Core field Type
 #: admin/class-dcm-base.php:337
 msgid "The nature or genre of the resource"
-msgstr "A natureza ou género de recurso"
+msgstr ""
 
 #. Translators: predefined default value for Coverage
 #: admin/class-dcm-base.php:419 admin/class-dcm-settings-page.php:250
 msgid "World"
-msgstr "Mundo"
+msgstr ""
 
 #. Translators: 1 is family name, 2 is first name
 #: admin/class-dcm-base.php:428
 #, php-format
 msgid "%1$s, %2$s"
-msgstr "%1$s, %2$s"
+msgstr ""
 
 #: admin/class-dcm-meta-box.php:36
 msgid "Dublin Core Metadata"
-msgstr "Metadados Dublin Core"
+msgstr ""
 
 #. Translators: link to the Dublin Core Element Set definition
 #: admin/class-dcm-meta-box.php:52
 msgid "http://dublincore.org/documents/dces/"
-msgstr "http://dublincore.org/documents/dces/"
+msgstr ""
 
 #: admin/class-dcm-meta-box.php:53
 msgid "Dublin Core specification and information about recommended values"
-msgstr "Especificação Dublin Core, e informação sobre valores recomendados"
+msgstr ""
 
 #: admin/class-dcm-meta-box.php:54
 msgid "(opens in a new window)"
-msgstr "(abre numa nova janela)"
+msgstr ""
 
 #: admin/class-dcm-meta-box.php:112
 msgid "Remove"
-msgstr "Remover"
+msgstr "הסרה"
 
 #: admin/class-dcm-meta-box.php:133
 msgid "Add another contributor"
-msgstr "Acrescentar outro(a) colaborador(a)"
+msgstr ""
 
 #: admin/class-dcm-meta-box.php:136
 msgid "Add another coverage"
-msgstr "Acrescentar outra cobertura"
+msgstr ""
 
 #: admin/class-dcm-meta-box.php:139
 msgid "Add another creator"
-msgstr "Acrescentar outro(a) criador(a)"
+msgstr ""
 
 #: admin/class-dcm-meta-box.php:142
 msgid "Add another date"
-msgstr "Acrescentar outra data"
+msgstr ""
 
 #: admin/class-dcm-meta-box.php:145
 msgid "Add another description"
-msgstr "Acrescentar outra descrição"
+msgstr ""
 
 #: admin/class-dcm-meta-box.php:148
 msgid "Add another format"
-msgstr "Acrescentar outro formato"
+msgstr ""
 
 #: admin/class-dcm-meta-box.php:151
 msgid "Add another identifier"
-msgstr "Acrescentar outro identificador"
+msgstr ""
 
 #: admin/class-dcm-meta-box.php:154
 msgid "Add another language"
-msgstr "Acrescentar outra língua"
+msgstr ""
 
 #: admin/class-dcm-meta-box.php:157
 msgid "Add another publisher"
-msgstr "Acrecentar outro(a) publicador(a)"
+msgstr ""
 
 #: admin/class-dcm-meta-box.php:160
 msgid "Add another relation"
-msgstr "Acrescentar outra relação"
+msgstr ""
 
 #: admin/class-dcm-meta-box.php:163
 msgid "Add another rights statement"
-msgstr "Acrescentar outra indicação de direitos"
+msgstr ""
 
 #: admin/class-dcm-meta-box.php:166
 msgid "Add another source"
-msgstr "Acrescentar outra fonte"
+msgstr ""
 
 #: admin/class-dcm-meta-box.php:169
 msgid "Add another subject"
-msgstr "Acrescentar outro assunto"
+msgstr ""
 
 #: admin/class-dcm-meta-box.php:172
 msgid "Add another title"
-msgstr "Acrescentar outro título"
+msgstr ""
 
 #: admin/class-dcm-meta-box.php:175
 msgid "Add another type"
-msgstr "Acrescentar outro tipo"
+msgstr ""
 
 #: admin/class-dcm-settings-page.php:28
 msgid "disabled"
-msgstr "desativado"
+msgstr ""
 
 #: admin/class-dcm-settings-page.php:29
 msgid "default only"
-msgstr "apenas valor por defeito"
+msgstr ""
 
 #: admin/class-dcm-settings-page.php:30
 msgid "editable"
-msgstr "editável"
+msgstr ""
 
 #. Translators: This is shown when there’s no default value
 #: admin/class-dcm-settings-page.php:33
 msgid "Nothing"
-msgstr "Nada"
+msgstr ""
 
 #: admin/class-dcm-settings-page.php:34
 msgid "Any text:"
-msgstr "Qualquer texto:"
+msgstr ""
 
 #: admin/class-dcm-settings-page.php:47
 #, php-format
@@ -321,7 +321,7 @@ msgid ""
 "This plugin adds %sDublin Core Metadata Element Set v1.1%s meta tags to the "
 "<code>head</code> of your site. Dublin Core elements are a subset of RDF and"
 " help with the discoverability of your site."
-msgstr "Este plugin acrescenta meta tags do %sDublin Core Metadata Element Set v1.1%s à seção <code>head</code> do seu site. Os elementos Dublin Core são um subconjunto do RDF, e melhoram a visibilidade do seu site."
+msgstr ""
 
 #: admin/class-dcm-settings-page.php:51
 msgid ""
@@ -329,149 +329,149 @@ msgid ""
 "resource description, to combining metadata vocabularies of different "
 "metadata standards, to providing interoperability for metadata vocabularies "
 "in the Linked data cloud and Semantic web implementations.”"
-msgstr "«Os metadados Dublin Core podem ser usados para múltiplos fins, como a simples descrição de recursos, a combinação de vocabulários de metadados de diferentes padrões, até à interoperabilidade de vocabulários de metadados nas implementações da nuvem Linked Data e da Rede Semântica.»"
+msgstr ""
 
 #: admin/class-dcm-settings-page.php:55
 msgid ""
 "This plugin automatically adds meta tags on pages and posts, including "
 "custom post types. No metadata is added to pages created by WordPress like "
 "the home page, category pages, archives, etc."
-msgstr "Este plugin acrescenta automaticamente meta tags às páginas e posts, inclusive posts custom. Não acrescenta metadados às páginas criadas pelo WordPress, tais como a página principal, as páginas de categorias, os arquivos etc."
+msgstr ""
 
 #: admin/class-dcm-settings-page.php:60
 msgid "Select Dublin Core Meta Tags"
-msgstr "Selecione os meta tags Dublin Core"
+msgstr ""
 
 #: admin/class-dcm-settings-page.php:61
 msgid ""
 "Change an element’s mode and default value below. Modes are as follows:"
-msgstr "Pode alterar o modo e o valor por defeito dos elementos abaixo. Os modos são assim:"
+msgstr ""
 
 #: admin/class-dcm-settings-page.php:63
 #, php-format
 msgid "%sDisabled:%s This field will not be used"
-msgstr "%sDesativado:%s Este campo não será usado"
+msgstr ""
 
 #: admin/class-dcm-settings-page.php:64
 #, php-format
 msgid ""
 "%sDefault only:%s The value for this field is obtained as indicated in the "
 "‘Default value’ column – it cannot be changed in the edit page"
-msgstr "%sApenas valor por defeito:%s O valor para este campo é obtido conforme indicado na coluna «Valor por defeito»; não pode ser mudado na página de edição"
+msgstr ""
 
 #: admin/class-dcm-settings-page.php:65
 #, php-format
 msgid ""
 "%sEditable:%s You will be able to change this field in the edit page. The "
 "default value will be suggested unless you enter a value in the edit page."
-msgstr "%sEditável:%s Poderá mudar este campo na página de edição. Ser-lhe-á sugerido o valor por defeito, a não ser que insira um valor na página de edição."
+msgstr ""
 
 #: admin/class-dcm-settings-page.php:68
 msgid "Caution"
-msgstr "Cuidado"
+msgstr ""
 
 #: admin/class-dcm-settings-page.php:69
 #, php-format
 msgid ""
 "%sCaution:%s Changing a field’s mode from ‘editable’ to ‘default only’ "
 "causes the removal of its metadata!"
-msgstr "%sCuidado:%s Mudar um campo do modo «editável» para «apenas valor por defeito» irá provocar a eliminação dos seus metadados!"
+msgstr ""
 
 #: admin/class-dcm-settings-page.php:76
 msgid "Element"
-msgstr "Elemento"
+msgstr ""
 
 #: admin/class-dcm-settings-page.php:77
 msgid "Mode"
-msgstr "Modo"
+msgstr ""
 
 #: admin/class-dcm-settings-page.php:79
 msgid "Default value"
-msgstr "Valor por defeito"
+msgstr ""
 
 #: admin/class-dcm-settings-page.php:101 admin/class-dcm-settings-page.php:106
 msgid "Post types"
-msgstr "Tipos de post"
+msgstr ""
 
 #: admin/class-dcm-settings-page.php:102
 msgid "Select the post types which should have Dublin Core Metadata."
-msgstr "Escolha os tipos de post que deverão ter metadados Dublin Core."
+msgstr ""
 
 #: admin/class-dcm-settings-page.php:115 admin/class-dcm-settings-page.php:119
 msgid "(X)HTML version"
-msgstr "Versão (X)HTML"
+msgstr ""
 
 #: admin/class-dcm-settings-page.php:116
 msgid "Select the (X)HTML version that corresponds to your doctype."
-msgstr "Escolha a versão de (X)HTML que corresponde ao seu tipo de documento."
+msgstr ""
 
 #: admin/class-dcm-settings-page.php:121 admin/class-dcm-settings-page.php:123
 #: admin/class-dcm-settings-page.php:125
 msgid "Meta tag will look like"
-msgstr "O meta tag irá ficar"
+msgstr ""
 
 #: admin/class-dcm-settings-page.php:249 admin/class-dcm-settings-page.php:345
 #, php-format
 msgid "‘%s’"
-msgstr "«%s»"
+msgstr ""
 
 #: admin/class-dcm-settings-page.php:258
 msgid "The post’s author"
-msgstr "Autor do post"
+msgstr ""
 
 #: admin/class-dcm-settings-page.php:266
 msgid "The post’s published date"
-msgstr "Data de publicação do post"
+msgstr ""
 
 #: admin/class-dcm-settings-page.php:274
 msgid "The post’s excerpt"
-msgstr "Excerto do post"
+msgstr ""
 
 #: admin/class-dcm-settings-page.php:282
 msgid "The post’s MIME type (if set)"
-msgstr "MIME type do post (se definido)"
+msgstr ""
 
 #: admin/class-dcm-settings-page.php:290
 msgid "The post’s permalink"
-msgstr "Permalink do post"
+msgstr ""
 
 #: admin/class-dcm-settings-page.php:298
 #, php-format
 msgid "The WordPress installation language (‘%s’)"
-msgstr "Língua da instalação do WordPress (‘%s’)"
+msgstr ""
 
 #: admin/class-dcm-settings-page.php:306
 #, php-format
 msgid "The website’s title (‘%s’)"
-msgstr "Título do sítio web (‘%s’)"
+msgstr ""
 
 #: admin/class-dcm-settings-page.php:317
 msgid "Value from Creative Commons Configurator plugin (if active)"
-msgstr "Valor do plugin Creative Commons Configurator (se ativo)"
+msgstr ""
 
 #: admin/class-dcm-settings-page.php:320
 msgid "Suggestion: the full URL (incl. http://) to your copyrights page"
-msgstr "Sugestão: o URL completo (com http://) da sua página de copyrights"
+msgstr ""
 
 #: admin/class-dcm-settings-page.php:329
 msgid "List of categories and tags (only for posts)"
-msgstr "Lista de categorias e tags (apenas para posts)"
+msgstr ""
 
 #: admin/class-dcm-settings-page.php:337
 msgid "The post’s title"
-msgstr "Título do post"
+msgstr ""
 
 #. Translators: 1 is previous version number, 2 is new version
 #: admin/class-dcm-upgrade.php:35
 #, php-format
 msgid "Error while upgrading DC Meta Tags %1$s to version %2$s."
-msgstr "Erro na atualização de DC Meta Tags %1$s para a versão %2$s."
+msgstr ""
 
 #. Translators: 1 is previous version number, 2 is new version
 #: admin/class-dcm-upgrade.php:42
 #, php-format
 msgid "Thank you for upgrading DC Meta Tags %1$s to version %2$s."
-msgstr "Obrigado por atualizar o DC Meta Tags %1$s para a versão %2$s."
+msgstr ""
 
 #: admin/class-dcm-upgrade.php:53
 #, php-format
@@ -480,4 +480,4 @@ msgid ""
 "and you are now running version %2$s, which is older. Your website may "
 "encounter unexpected errors. You are advised to restore this plugin back to "
 "version %1$s."
-msgstr "ERRO: Está a fazer uma DESATUALIZAÇÃO. Tinha o DC Meta Tags versão %1$s, e agora tem a versão %2$s, que é mais antiga. O seu website poderá encontrar erros inesperados. Aconselhamo-la(o) a voltar a colocar este plugin na versão %1$s."
+msgstr ""
