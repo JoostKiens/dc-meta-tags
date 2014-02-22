@@ -1,6 +1,14 @@
 Change log for Dublin Core Meta Tags
 ------------------------------------
 
+#### 0.4.2
+
+*Released 2014-02-22*
+
+* Added: pt_BR translation
+* Improved: fr_FR translation
+* Fixed: Do not fire admin during an ajax request
+
 #### 0.4.1
 
 *Released 2014-02-21*

@@ -51,7 +51,7 @@ define( 'DCM_MAINFILE', __FILE__ );
 define( 'DCM_BASENAME', plugin_basename( __FILE__ ) );
 define( 'DCM_PATH', plugin_dir_path( __FILE__ ) );
 define( 'DCM_URL', plugin_dir_url( __FILE__ ) );
-define( 'DCM_VERSION', '0.4.1' );
+define( 'DCM_VERSION', '0.4.2' );
 define( 'DCM_MIN_WP_VERSION', '3.3.0');
 define( 'DCM_OPTION_NAME', 'dc_meta_tags_options' );
 define( 'DCM_OPTION_GROUP', 'dc_meta_tags_options_group' );
@@ -94,7 +94,9 @@ function dcm_frontend_init() {
 }
 
 if ( is_admin() ) {
-	add_action( 'plugins_loaded', 'dcm_admin_init', 0 );
+	if ( defined('DOING_AJAX') && DOING_AJAX ) {  // if we had ajax, we’d load it here
+	}
+	else add_action( 'plugins_loaded', 'dcm_admin_init', 0 );
 } else {	
 	add_action( 'plugins_loaded', 'dcm_frontend_init', 0 );
 }

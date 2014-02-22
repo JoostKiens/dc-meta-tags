@@ -3,13 +3,14 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
+# Júlio Reis, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: DC Meta Tags\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-02-20 22:18+0000\n"
-"PO-Revision-Date: 2014-02-20 22:30+0000\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2014-02-21 23:10+0000\n"
+"Last-Translator: Júlio Reis\n"
 "Language-Team: Spanish (Spain) (http://www.transifex.com/projects/p/wp-translations/language/es_ES/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -205,13 +206,13 @@ msgstr ""
 #. Translators: predefined default value for Coverage
 #: admin/class-dcm-base.php:419 admin/class-dcm-settings-page.php:250
 msgid "World"
-msgstr ""
+msgstr "Mundo"
 
 #. Translators: 1 is family name, 2 is first name
 #: admin/class-dcm-base.php:428
 #, php-format
 msgid "%1$s, %2$s"
-msgstr ""
+msgstr "%1$s, %2$s"
 
 #: admin/class-dcm-meta-box.php:36
 msgid "Dublin Core Metadata"
@@ -379,7 +380,7 @@ msgstr ""
 
 #: admin/class-dcm-settings-page.php:76
 msgid "Element"
-msgstr ""
+msgstr "Elemento"
 
 #: admin/class-dcm-settings-page.php:77
 msgid "Mode"
@@ -399,7 +400,7 @@ msgstr ""
 
 #: admin/class-dcm-settings-page.php:115 admin/class-dcm-settings-page.php:119
 msgid "(X)HTML version"
-msgstr ""
+msgstr "Versión (X)HTML"
 
 #: admin/class-dcm-settings-page.php:116
 msgid "Select the (X)HTML version that corresponds to your doctype."
