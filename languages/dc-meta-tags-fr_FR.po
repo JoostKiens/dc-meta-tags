@@ -3,13 +3,15 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
+# Francois-Xavier Bénard <fxb@wp-translations.org>, 2014
+# Júlio Reis, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: DC Meta Tags\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-02-20 22:18+0000\n"
-"PO-Revision-Date: 2014-02-20 22:30+0000\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2014-02-21 23:30+0000\n"
+"Last-Translator: Júlio Reis\n"
 "Language-Team: French (France) (http://www.transifex.com/projects/p/wp-translations/language/fr_FR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -33,7 +35,7 @@ msgstr ""
 #: admin/class-dcm-admin.php:86
 #, php-format
 msgid "%1$s %2$s not activated"
-msgstr ""
+msgstr "%1$s %2$s non activé"
 
 #. Translators: 1 is current WordPress version, 2 is required version
 #: admin/class-dcm-admin.php:88
@@ -41,11 +43,11 @@ msgstr ""
 msgid ""
 "You are running WordPress version %1$s. This plugin requires version %2$s or"
 " higher, and has been deactivated! Please upgrade WordPress and try again."
-msgstr ""
+msgstr "Vous utilisez WordPress %1$s. Cette extension nécessite la version %2$s ou supérieure, et a été désactivée ! Veuillez mettre à jour WordPress et réessayez. "
 
 #: admin/class-dcm-admin.php:89
 msgid "Back to WordPress admin"
-msgstr ""
+msgstr "Retour à l’admin de WordPress"
 
 #. Translators: a separator between items on a list
 #: admin/class-dcm-admin.php:103 admin/class-dcm-base.php:488
@@ -73,7 +75,7 @@ msgstr ""
 
 #: admin/class-dcm-base.php:239
 msgid "Creator"
-msgstr ""
+msgstr "Créateur"
 
 #: admin/class-dcm-base.php:241
 msgid "Date"
@@ -93,7 +95,7 @@ msgstr ""
 
 #: admin/class-dcm-base.php:249
 msgid "Language"
-msgstr ""
+msgstr "Langue"
 
 #: admin/class-dcm-base.php:251
 msgid "Publisher"
@@ -109,7 +111,7 @@ msgstr ""
 
 #: admin/class-dcm-base.php:257
 msgid "Source"
-msgstr "Adresse web source"
+msgstr "Source"
 
 #: admin/class-dcm-base.php:259
 msgid "Subject"
@@ -165,7 +167,7 @@ msgstr ""
 #. Translators: official definition for the Dublin Core field Language
 #: admin/class-dcm-base.php:316
 msgid "A language of the resource"
-msgstr ""
+msgstr "Une langue de la ressource"
 
 #. Translators: official definition for the Dublin Core field Publisher
 #: admin/class-dcm-base.php:319
@@ -175,7 +177,7 @@ msgstr ""
 #. Translators: official definition for the Dublin Core field Relation
 #: admin/class-dcm-base.php:322
 msgid "A related resource"
-msgstr ""
+msgstr "Une ressource relative"
 
 #. Translators: official definition for the Dublin Core field Rights
 #: admin/class-dcm-base.php:325
@@ -190,17 +192,17 @@ msgstr ""
 #. Translators: official definition for the Dublin Core field Subject
 #: admin/class-dcm-base.php:331
 msgid "The topic of the resource"
-msgstr ""
+msgstr "Le sujet de la ressource"
 
 #. Translators: official definition for the Dublin Core field Title
 #: admin/class-dcm-base.php:334
 msgid "A name given to the resource"
-msgstr ""
+msgstr "Le nom donné à la ressource"
 
 #. Translators: official definition for the Dublin Core field Type
 #: admin/class-dcm-base.php:337
 msgid "The nature or genre of the resource"
-msgstr ""
+msgstr "La nature ou le genre de la ressource"
 
 #. Translators: predefined default value for Coverage
 #: admin/class-dcm-base.php:419 admin/class-dcm-settings-page.php:250
@@ -211,16 +213,16 @@ msgstr ""
 #: admin/class-dcm-base.php:428
 #, php-format
 msgid "%1$s, %2$s"
-msgstr ""
+msgstr "%1$s, %2$s"
 
 #: admin/class-dcm-meta-box.php:36
 msgid "Dublin Core Metadata"
-msgstr ""
+msgstr "Métadonnées Dublin Core"
 
 #. Translators: link to the Dublin Core Element Set definition
 #: admin/class-dcm-meta-box.php:52
 msgid "http://dublincore.org/documents/dces/"
-msgstr ""
+msgstr "http://dublincore.org/documents/dces/"
 
 #: admin/class-dcm-meta-box.php:53
 msgid "Dublin Core specification and information about recommended values"
@@ -228,7 +230,7 @@ msgstr ""
 
 #: admin/class-dcm-meta-box.php:54
 msgid "(opens in a new window)"
-msgstr ""
+msgstr "(s'ouvre dans une nouvelle fenêtre)"
 
 #: admin/class-dcm-meta-box.php:112
 msgid "Remove"
@@ -236,35 +238,35 @@ msgstr "Supprimer"
 
 #: admin/class-dcm-meta-box.php:133
 msgid "Add another contributor"
-msgstr ""
+msgstr "Ajouter un autre contributeur"
 
 #: admin/class-dcm-meta-box.php:136
 msgid "Add another coverage"
-msgstr ""
+msgstr "Ajouter une autre couverture"
 
 #: admin/class-dcm-meta-box.php:139
 msgid "Add another creator"
-msgstr ""
+msgstr "Ajouter une autre créateur"
 
 #: admin/class-dcm-meta-box.php:142
 msgid "Add another date"
-msgstr ""
+msgstr "Ajouter une autre date"
 
 #: admin/class-dcm-meta-box.php:145
 msgid "Add another description"
-msgstr ""
+msgstr "Ajouter une autre description"
 
 #: admin/class-dcm-meta-box.php:148
 msgid "Add another format"
-msgstr ""
+msgstr "Ajouter une autre format"
 
 #: admin/class-dcm-meta-box.php:151
 msgid "Add another identifier"
-msgstr ""
+msgstr "Ajouter un autre identificateur"
 
 #: admin/class-dcm-meta-box.php:154
 msgid "Add another language"
-msgstr ""
+msgstr "Ajouter une autre langue"
 
 #: admin/class-dcm-meta-box.php:157
 msgid "Add another publisher"
@@ -272,7 +274,7 @@ msgstr ""
 
 #: admin/class-dcm-meta-box.php:160
 msgid "Add another relation"
-msgstr ""
+msgstr "Ajouter une autre relation"
 
 #: admin/class-dcm-meta-box.php:163
 msgid "Add another rights statement"
@@ -280,36 +282,36 @@ msgstr ""
 
 #: admin/class-dcm-meta-box.php:166
 msgid "Add another source"
-msgstr ""
+msgstr "Ajouter une autre source"
 
 #: admin/class-dcm-meta-box.php:169
 msgid "Add another subject"
-msgstr ""
+msgstr "Ajouter un autre sujet"
 
 #: admin/class-dcm-meta-box.php:172
 msgid "Add another title"
-msgstr ""
+msgstr "Ajouter un autre titre"
 
 #: admin/class-dcm-meta-box.php:175
 msgid "Add another type"
-msgstr ""
+msgstr "Ajouter une autre type"
 
 #: admin/class-dcm-settings-page.php:28
 msgid "disabled"
-msgstr ""
+msgstr "désactivé"
 
 #: admin/class-dcm-settings-page.php:29
 msgid "default only"
-msgstr ""
+msgstr "Par défaut uniquement"
 
 #: admin/class-dcm-settings-page.php:30
 msgid "editable"
-msgstr ""
+msgstr "modifiable"
 
 #. Translators: This is shown when there’s no default value
 #: admin/class-dcm-settings-page.php:33
 msgid "Nothing"
-msgstr ""
+msgstr "Rien"
 
 #: admin/class-dcm-settings-page.php:34
 msgid "Any text:"
@@ -368,7 +370,7 @@ msgstr ""
 
 #: admin/class-dcm-settings-page.php:68
 msgid "Caution"
-msgstr ""
+msgstr "Attention"
 
 #: admin/class-dcm-settings-page.php:69
 #, php-format
@@ -379,99 +381,99 @@ msgstr ""
 
 #: admin/class-dcm-settings-page.php:76
 msgid "Element"
-msgstr ""
+msgstr "Élément "
 
 #: admin/class-dcm-settings-page.php:77
 msgid "Mode"
-msgstr ""
+msgstr "Mode"
 
 #: admin/class-dcm-settings-page.php:79
 msgid "Default value"
-msgstr ""
+msgstr "Valeur par défaut"
 
 #: admin/class-dcm-settings-page.php:101 admin/class-dcm-settings-page.php:106
 msgid "Post types"
-msgstr ""
+msgstr "Types d'article"
 
 #: admin/class-dcm-settings-page.php:102
 msgid "Select the post types which should have Dublin Core Metadata."
-msgstr ""
+msgstr "Sélectionner le type d'article pour les métadonnées Dublin Core."
 
 #: admin/class-dcm-settings-page.php:115 admin/class-dcm-settings-page.php:119
 msgid "(X)HTML version"
-msgstr ""
+msgstr "Version (X)HTML"
 
 #: admin/class-dcm-settings-page.php:116
 msgid "Select the (X)HTML version that corresponds to your doctype."
-msgstr ""
+msgstr "Sélectionner la version (X)HTML qui correspond à votre doctype."
 
 #: admin/class-dcm-settings-page.php:121 admin/class-dcm-settings-page.php:123
 #: admin/class-dcm-settings-page.php:125
 msgid "Meta tag will look like"
-msgstr ""
+msgstr "Le Meta Tag ressemblera à "
 
 #: admin/class-dcm-settings-page.php:249 admin/class-dcm-settings-page.php:345
 #, php-format
 msgid "‘%s’"
-msgstr ""
+msgstr "‘%s’"
 
 #: admin/class-dcm-settings-page.php:258
 msgid "The post’s author"
-msgstr ""
+msgstr "L'auteur de l&rsquo;article"
 
 #: admin/class-dcm-settings-page.php:266
 msgid "The post’s published date"
-msgstr ""
+msgstr "La date de publication de l'articles"
 
 #: admin/class-dcm-settings-page.php:274
 msgid "The post’s excerpt"
-msgstr ""
+msgstr "L'extrait de l'article"
 
 #: admin/class-dcm-settings-page.php:282
 msgid "The post’s MIME type (if set)"
-msgstr ""
+msgstr "Le type MIME de l'article (si défini)"
 
 #: admin/class-dcm-settings-page.php:290
 msgid "The post’s permalink"
-msgstr ""
+msgstr "Le permalien de l'article"
 
 #: admin/class-dcm-settings-page.php:298
 #, php-format
 msgid "The WordPress installation language (‘%s’)"
-msgstr ""
+msgstr "La langue d'installation de WordPress (‘%s’)"
 
 #: admin/class-dcm-settings-page.php:306
 #, php-format
 msgid "The website’s title (‘%s’)"
-msgstr ""
+msgstr "Le titre du site Web (‘%s’)"
 
 #: admin/class-dcm-settings-page.php:317
 msgid "Value from Creative Commons Configurator plugin (if active)"
-msgstr ""
+msgstr "Valeur pour l'extension Creative Commons Configurator (si active)"
 
 #: admin/class-dcm-settings-page.php:320
 msgid "Suggestion: the full URL (incl. http://) to your copyrights page"
-msgstr ""
+msgstr "Suggestion : l'URL complète (avec http://) vers votre page de copyrights."
 
 #: admin/class-dcm-settings-page.php:329
 msgid "List of categories and tags (only for posts)"
-msgstr ""
+msgstr "La liste des catégories et des mots-clefs (uniquement pour les articles)"
 
 #: admin/class-dcm-settings-page.php:337
 msgid "The post’s title"
-msgstr ""
+msgstr "Le titre de l'article"
 
 #. Translators: 1 is previous version number, 2 is new version
 #: admin/class-dcm-upgrade.php:35
 #, php-format
 msgid "Error while upgrading DC Meta Tags %1$s to version %2$s."
-msgstr ""
+msgstr "Erreur lors de la mise à jour de DC Meta Tags de la version %1$s à la version %2$s."
 
 #. Translators: 1 is previous version number, 2 is new version
 #: admin/class-dcm-upgrade.php:42
 #, php-format
 msgid "Thank you for upgrading DC Meta Tags %1$s to version %2$s."
-msgstr ""
+msgstr "Merci d'avoir mis à jour DC Meta Tags de la version %1$s à la version %2$s."
 
 #: admin/class-dcm-upgrade.php:53
 #, php-format
