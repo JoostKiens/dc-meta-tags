@@ -16,6 +16,8 @@ if( !DCM_FIELD_PREFIX ) {
 }
 
 /* remove meta from posts and pages */
+global $wpdb;
+
 $wpdb->query( $wpdb->prepare(
 	"DELETE FROM $wpdb->postmeta WHERE meta_key LIKE '%s'",
 	DCM_FIELD_PREFIX.'%' )
